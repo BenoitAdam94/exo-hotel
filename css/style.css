@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 div{
     border:2px solid #333;
 }
@@ -48,3 +49,13 @@ figcaption {
     transition: 0.5s;
     bottom: 0;
   }*/
+=======
+.container{
+    max-width: 1600px;
+}
+
+.col-sm-4{
+    text-align: center;
+    border: 2px solid rgba(148, 136, 30, 0.87);
+}
+>>>>>>> 391c402b2e4f595db0c0e040452d454308619010
