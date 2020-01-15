@@ -15,6 +15,8 @@ div{
     width:512px;
     height:288px;
 }
+
+
 /*
 .boutons h2{
     text-shadow: 2px 0 0 #111, 2px 2px 0 #111, 0 2px 0 #111, -2px 2px 0 #111, -2px 0 0 #111, -2px -2px 0 #111, 0 -2px 0 #111, 2px -2px 0 #111;
@@ -22,6 +24,7 @@ div{
 
 .boutons h2{
     text-shadow: 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111;
+    color:#eee
 }
 /*
 .c4-izmir figcaption {
