@@ -1,0 +1,50 @@
+div{
+    border:2px solid #333;
+}
+
+
+
+
+.container{
+    max-width:1600px;
+}
+
+
+.boutons img{
+    width:512px;
+    height:288px;
+}
+/*
+.boutons h2{
+    text-shadow: 2px 0 0 #111, 2px 2px 0 #111, 0 2px 0 #111, -2px 2px 0 #111, -2px 0 0 #111, -2px -2px 0 #111, 0 -2px 0 #111, 2px -2px 0 #111;
+}*/
+
+.boutons h2{
+    text-shadow: 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111;
+}
+/*
+.c4-izmir figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    padding: var(--padding);
+    width: 100%;
+    z-index: 2111; }*/
+
+figcaption {
+    
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -60px;
+    transition: 0.5s;
+    bottom: 0;
+  }*/
