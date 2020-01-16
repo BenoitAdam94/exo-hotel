@@ -23,6 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Blinker|Cantarell|Gentium+Book+Basic|Lato|Old+Standard+TT|Open+Sans|Oswald|PT+Sans|Parisienne|Poppins|Rokkitt|Vollkorn&display=swap" rel="stylesheet"> 
         <!-- Icone de la page (Favicon) / 64*64 mini - 512*512 recommandé -->
         <link rel="icon" type="image/png" href="img/favicon.jpg">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <!-- URL Cannonique du site -->
         <link rel="canonical" href="https://www.hotelcop.fr">
         <!-- Open Graph pour Facebook & Autres -->
@@ -49,17 +50,40 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <body>
         <div class="container">
             <div class="row menu">
-                <div class="col-sm-12">
-                    <img class="mx-auto d-block" src="img/logo/logo-hotel-cop-restaurant-spa-palace-paris-8.jpg">
-                    <h1>Hôtel, Restaurant & Spa</h1>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="#"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                
+                    <div class="col-sm-4">
+                        <!--<nav class="navbar navbar-light bg-light">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                                
+                            </form>
+                        </nav>-->
+                        <form class="search">
+                            <div class="search__wrapper">
+                              <input type="text" name="" placeholder="Search for..." class="search__field">
+                              <button type="submit" class="fa fa-search search__icon"></button>
+                            </div>
+                          </form>   
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img class="mx-auto d-block" src="img/logo/logo-hotel-cop-restaurant-spa-palace-paris-8.jpg">
+                        <h1>Hôtel, Restaurant & Spa</h1>
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <span>FR /</span><span> EN</span>
+                        <br><br>
+                        <div class=monBouton>Réserver</div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand" href="#"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                                <!--<a class="nav-item nav-link active" href="index.htm">Home <span class="sr-only">(current)</span></a>-->
                                 <a class="nav-item nav-link" href="chambres-et-gammes.htm">Chambres</a>
                                 <a class="nav-item nav-link" href="restaurant-et-carte.htm">Restaurant</a>
                                 <a class="nav-item nav-link" href="spa-soin.htm">Spa</a>
@@ -67,11 +91,11 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 <a class="nav-item nav-link" href="hotel-presse.htm">Presse</a>
                                 <a class="nav-item nav-link" href="avis.htm">Avis</a>
                             </div>
-                        </div>
-                      </nav>
-                   
-                </div>
-            </div>     
+                            </div>
+                        </nav>
+                    </div>
+            </div>
+        </div>     
         
             <div class="row footer">
                 <div class="col-sm-12">
@@ -82,12 +106,32 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
         </div>
     
 
+
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
     <script>
-   
+        $(document).ready(function(){
+            $(".monBouton").click(function(){
+                location.href="reservation.htm";
+            });
+            $('span').hover(
+                function(){   
+                    $(this).css('color','grey');
+                },
+                function(){    
+                    $(this).css('color','black');
+                }
+            );
+            $('.nav-item').mouseover(function(){   
+                    $(this).css('color','black');
+                });
+            $('.nav-item').mouseout(function(){   
+                    $(this).css('color','grey');
+                });
+
+         });
     
     </script>
     </body>
