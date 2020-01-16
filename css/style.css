@@ -11,6 +11,27 @@ p, ul{
     font-size: 1.2em;
 }
 
+.scroll2 {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: 35px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    
+    color: inherit;
+    transition: .3s;
+    text-shadow: 
+    rgba(0,0,0,.4) -1px 1px;
+    letter-spacing: .8px;
+    font-size: 1.4rem;
+}
+
+.r90{
+    rotate(90deg);
+  }
+
 
 /* ***** FOOTER ***** */
 
@@ -34,6 +55,17 @@ footer a:hover{
     max-width:1600px;
 }
 
+.text-legende{
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+    
+}
+
+.text-accueil{
+    color:white;
+    padding-bottom: 12rem;
+    z-index: 1030;
+}
 
 .boutons img{
     width:512px;
@@ -52,13 +84,14 @@ footer a:hover{
 }
 
 /*
-.boutons h2{
+{
     text-shadow: 2px 0 0 #111, 2px 2px 0 #111, 0 2px 0 #111, -2px 2px 0 #111, -2px 0 0 #111, -2px -2px 0 #111, 0 -2px 0 #111, 2px -2px 0 #111;
 }*/
 
-.boutons h2{
+.text-shadow, .boutons h2{
     text-shadow: 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111;
     color:#eee
+    font-family:'Rokkitt', 'Poppins';
 }
 
 
