@@ -1,12 +1,29 @@
 
 body{
-    font-family: 'Cormorant', serif;
+    font-family: 'Cantarel', 'Cormorant', serif;
 }
 
 div{
     border:2px solid #333;
 }
 
+p, ul{
+    font-size: 1.2em;
+}
+
+footer{
+    font-family: 'Rokkitt', 'Poppins';
+    background-color: #343a40;
+    color:#f8f9fa;
+}
+
+footer a{
+    color:#f8f9fa;
+}
+
+footer a:hover{
+    color:#f8f9fa;
+}
 
 
 
@@ -24,6 +41,11 @@ div{
 .description img{
     width:960px;
     height:540px;
+}
+
+.img512{
+    width:512px;
+    height:288px;
 }
 
 /*
@@ -62,14 +84,6 @@ figcaption {
     bottom: 0;
   }*/
 
-.col-sm-4{
-    align-items: center;
-    border: 2px solid rgba(148, 136, 30, 0.87);
-}
-
-.col-sm-12{
-    text-align: center;
-}
 
 
 
@@ -175,9 +189,5 @@ figcaption {
 }
 h4{
     color: rgba(148, 136, 30, 0.87);
-}
-
-a{
-    color: #111;
 }
 
