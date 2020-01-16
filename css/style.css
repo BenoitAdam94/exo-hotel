@@ -1,4 +1,8 @@
 
+body{
+    font-family: 'Cormorant', serif;
+}
+
 div{
     border:2px solid #333;
 }
@@ -59,7 +63,7 @@ figcaption {
   }*/
 
 .col-sm-4{
-    text-align: center;
+    align-items: center;
     border: 2px solid rgba(148, 136, 30, 0.87);
 }
 
@@ -169,3 +173,11 @@ figcaption {
     -o-transition: background-position .1s linear;
     transition: background-position .1s linear
 }
+h4{
+    color: rgba(148, 136, 30, 0.87);
+}
+
+a{
+    color: #111;
+}
+
