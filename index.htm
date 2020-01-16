@@ -279,7 +279,27 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="addons/cookiebar/jquery.cookieBar.min.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
     <script>
-   
+        $(document).ready(function(){
+            $(".monBouton").click(function(){
+                location.href="reservation.htm";
+            });
+            $('span').hover(
+                function(){   
+                    $(this).css('color','grey');
+                },
+                function(){    
+                    $(this).css('color','black');
+                }
+            );
+            $('.nav-item').mouseover(function(){   
+                    $(this).css('color','black');
+                });
+            $('.nav-item').mouseout(function(){   
+                    $(this).css('color','grey');
+                });
+
+
+        });
     
     </script>
     </body>
