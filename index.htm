@@ -283,6 +283,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             $(".monBouton").click(function(){
                 location.href="reservation.htm";
             });
+            $('.monBouton').mouseout(function(){   
+                    $(this).css({'background-color':'rgba(148, 136, 30, 0.87)','color':'white'});
+                });
+            $('.monBouton').mouseover(function(){   
+                    $(this).css({'color':'rgba(148, 136, 30, 0.87)','background-color':'white'});
+                });
             $('span').hover(
                 function(){   
                     $(this).css('color','grey');
