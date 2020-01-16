@@ -79,3 +79,12 @@ a{
     color: #111;
 }
 
+.navbar-brandnavbar {
+    border: none;
+}
+
+h1{
+    font-size: 15px;
+    font-family: 'Cormorant SC', serif;
+}
+
