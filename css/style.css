@@ -150,11 +150,7 @@ h1{
   }
   .search__field:focus {
     border-bottom-color: #ccc;
-<<<<<<< HEAD
     width: 20vw;
-=======
-    width: 10vw;
->>>>>>> fdb007434c1c81ff9f61bd505c34227aec5c1850
     color: #2b2b2b;
     cursor: default;
   }
