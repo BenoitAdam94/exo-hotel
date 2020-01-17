@@ -11,7 +11,28 @@ $('a[href^="#"]').click(function(){
 	return false;
 });
 
+/* Search Bar responsive menu */
 
+function searchbargrow(mediax) {
+	var u = document.getElementById('search_field');
+	console.log(u);
+	if (mediax.matches) {
+	  	u.style.width="100%";
+	  	u.style.border="1px solid grey";
+	  	console.log('if');
+	} else {
+		u.style.width="";
+	  	u.style.border="1px solid transparent";
+	  	console.log('else');
+	}
+  }
+
+  console.info('info');
+  var mediax = window.matchMedia("(max-width: 992px)");
+  searchbargrow(mediax);
+  mediax.addListener(searchbargrow);
+
+  
 
 /* Lydie */
 
