@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="css/izmir.css">
         <link rel="stylesheet" href="addons/cookiebar/cookieBar.min.css">
         <link rel="stylesheet" href="css/style.css">
+        
         <!-- Polices Externes (Fonts) -->
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Blinker|Cantarell|Gentium+Book+Basic|Lato|Old+Standard+TT|Open+Sans|Oswald|PT+Sans|Parisienne|Poppins|Rokkitt|Vollkorn&display=swap" rel="stylesheet"> 
         <!-- Icone de la page (Favicon) / 64*64 mini - 512*512 recommandé -->
@@ -50,7 +51,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <body>
         <div class="container">
             <div class="row menu">
-                <div class="col-sm-4">
+                <div class="col-sm-4 d-none .d-sm-flex d-sm-none d-md-flex">
                     <!--<nav class="navbar navbar-light bg-light">
                         <form class="form-inline">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,18 +59,13 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             
                         </form>
                     </nav>-->
-                    <form class="search">
-                        <div class="search__wrapper">
-                          <input type="text" name="" placeholder="Search for..." class="search__field">
-                          <button type="submit" class="fa fa-search search__icon"></button>
-                        </div>
-                      </form>   
+                    
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="mx-auto d-block" src="img/logo/logo-hotel-cop-restaurant-spa-palace-paris-8.jpg">
                     <h1>Hôtel, Restaurant & Spa</h1>
                 </div>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 text-right d-none .d-sm-flex d-sm-none d-md-flex">
                     <span>FR /</span><span> EN</span>
                     <br><br>
                     <div class=monBouton>Réserver</div>
@@ -90,12 +86,23 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <a class="nav-item nav-link" href="hotel-presse.htm">Presse</a>
                             <a class="nav-item nav-link" href="avis.htm">Avis</a>
                         </div>
+                        <div>
+                        <form class="search"></form>
+                            <div class="search__wrapper">
+                            
+                              <input type="text" name="" placeholder="Search for..." class="search__field"> <!-- -->
+                            
+                              <button type="submit" class="fa fa-search search__icon"></button>
+                            </div>
+                        </form>   
+                        </div>
                         </div>
                     </nav>
                 </div>
             </div>
             <div class="row fondecran d-none .d-sm-flex d-sm-none d-md-flex">
                 <div class="col-sm-12 p-0">
+
                     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                         <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -122,7 +129,15 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                           <span class="sr-only">Next</span>
                         </a>
                       </div>
+                      <div class="card-img-overlay d-flex justify-content-center align-items-end text-center text-accueil text-shadow">
+                        <button type="button" class="navbar-toggler-icon r90">
+                            <span class="carousel-control-next-icon r90"></span>
+                            <a href="#destination1" class="r90"><h2>en savoir plusss</h2></a>
+                            
+                        </button>
+                    </div>    
                 </div>
+                
             </div>
             <div class="row reservation d-lg-none">
                 <div class="col-5 d-flex justify-content-around align-items-center">
@@ -133,13 +148,13 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <h3>Reservation</h3>
                 </div>
             </div>
-            <div class="row boutons">
+            <div class="row boutons" id="destination1">
                 <div class="col-sm-4 d-flex justify-content-center align-items-center p-4">
                     <figure class="c4-izmir c4-border-corners-1" style="--primary-color: #FFFFFF; --image-opacity: .8">
                         <img src="img/chambres/confort/chambre-confort-hotel-cop.jpg" alt="Sample Image">
                         <figcaption></figcaption>
                     </figure>                      
-                    <div class="card-img-overlay d-flex justify-content-start align-items-end ml-4">
+                    <div class="card-img-overlay d-flex justify-content-start align-items-end text-legende">
                         <h2>Nos Chambres</h2>
                     </div>
                 </div>
@@ -150,7 +165,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <figcaption></figcaption>
                         
                     </figure>                      
-                    <div class="card-img-overlay d-flex justify-content-start align-items-end ml-2">
+                    <div class="card-img-overlay d-flex justify-content-start align-items-end text-legende">
                         <h2>Notre Restaurant</h2>
                     </div>
                 </div>
@@ -158,8 +173,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <figure class="c4-izmir c4-border-corners-1" style="--primary-color: #FFFFFF; --image-opacity: .8">
                         <img src="img/spa/spa-hotel-cop-paris-8-3.jpg" alt="Sample Image">
                         <figcaption></figcaption>
-                    </figure> 
-                    <div class="card-img-overlay d-flex justify-content-start align-items-end ml-2">
+                    </figure>
+                    <div class="card-img-overlay d-flex justify-content-start align-items-end text-legende">
                         <h2>Le Spa et nos soins</h2>
                     </div>                    
                 </div>
@@ -203,7 +218,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <i class="fas fa-envelope-open-text fa-2x p-4"></i>
                         <p>Abonnez-vous à notre newsletter et recevez les news & offres exclusives.</p>
                         <form>
-                            <input id="newsletter" name="newsletter" type="email"><button id="inscription-newsletter">S'inscrire</button>
+                            <input id="newsletter" name="newsletter" type="email" value="Votre adresse Email"><button id="inscription-newsletter">S'inscrire</button>
                         </form>
                     </div>
                 </div>
@@ -237,10 +252,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
 
             <footer class="row footer justify-content-around">
                 
-                <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                <div class="col-sm-5 d-flex justify-content-center align-items-center p-4">
                     <figure class="c4-izmir c4-border-corners-1" style="--primary-color: #FFFFFF; --image-opacity: .8">
-                        <img src="img/hotel/exterieur.jpg" alt="hotel cop vue depuis la rue">
-                        <figcaption>
+                        <img src="img/quartier/carte454x360.jpg" alt="hotel cop vue depuis la rue">
+                        <figcaption class="c4-layout-bottom-left  c4-rotate-up-right">
                             <h2>Plan Et Accès</h2>
                         </figcaption>
                     </figure>
@@ -267,7 +282,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </p>
                     
                     <p class="text-right">
-                    <i class="fab fa-facebook fa-2x btn-dark btn-lg"></i>
                     <i class="fab fa-facebook-square fa-2x btn-dark btn-lg"></i>
                     <i class="fab fa-instagram fa-2x btn-dark btn-lg"></i>
                     <i class="fab fa-twitter fa-2x btn-dark btn-lg"></i>
@@ -279,6 +293,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="addons/cookiebar/jquery.cookieBar.min.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
     <script>
