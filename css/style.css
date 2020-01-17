@@ -6,6 +6,7 @@ body{
 
 .container{
   max-width:1600px;
+    font-family: 'Amiri', serif;
 }
 
 div{
@@ -77,11 +78,14 @@ a{
 
 h1{
     font-size: 15px;
-    font-family: 'Cormorant SC', serif;
+    font-family:'Amiri', serif;
+    color: rgb(110, 107, 107);
 }
 
 
 /* ***** NAVBAR ***** */
+
+
 
 .navbar-nav{
     border: none;
