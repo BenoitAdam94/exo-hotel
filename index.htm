@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/izmir.css">
-        <link rel="stylesheet" href="addons/cookiebar/cookieBar.min.css">
         <link rel="stylesheet" href="css/style.css">
         
         <!-- Polices Externes (Fonts) -->
@@ -70,7 +69,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <br><br>
                     <div class=monBouton>Réserver</div>
                 </div>
-                <div class="col-sm-12 text-center">
+                
+                <div class="row text-center">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <a class="navbar-brand" href="#"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,11 +130,11 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </a>
                       </div>
                       <div class="card-img-overlay d-flex justify-content-center align-items-end text-center text-accueil text-shadow">
-                        <button type="button" class="navbar-toggler-icon r90">
+                        <a href="#destination1"><button type="button" class="btn btn-link">
+                            <h2 class="text-light">en savoir plus</h2>
                             <span class="carousel-control-next-icon r90"></span>
-                            <a href="#destination1" class="r90"><h2>en savoir plusss</h2></a>
-                            
-                        </button>
+                        </button>    
+                        </a>
                     </div>    
                 </div>
                 
@@ -294,37 +294,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="addons/cookiebar/jquery.cookieBar.min.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function(){
-            $(".monBouton").click(function(){
-                location.href="reservation.htm";
-            });
-            $('.monBouton').mouseout(function(){   
-                    $(this).css({'background-color':'rgba(148, 136, 30, 0.87)','color':'white'});
-                });
-            $('.monBouton').mouseover(function(){   
-                    $(this).css({'color':'rgba(148, 136, 30, 0.87)','background-color':'white'});
-                });
-            $('span').hover(
-                function(){   
-                    $(this).css('color','grey');
-                },
-                function(){    
-                    $(this).css('color','black');
-                }
-            );
-            $('.nav-item').mouseover(function(){   
-                    $(this).css('color','black');
-                });
-            $('.nav-item').mouseout(function(){   
-                    $(this).css('color','grey');
-                });
-
-
-        });
     
+    <script>
+
     </script>
     </body>
 </html>
