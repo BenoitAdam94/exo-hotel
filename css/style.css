@@ -267,3 +267,22 @@ footer a:hover{
     opacity: 1;
     visibility: visible !important;
   }
+
+/* CSS Formulaire */
+
+  .form_col {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 3px 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: right;
+  }
+
+  input {
+    padding: 2px;
+    border: 1px solid #CCC;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
