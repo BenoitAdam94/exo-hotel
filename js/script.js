@@ -78,7 +78,7 @@ var civf = false
 var nomf = false
 var prenomf = false
 var servicef = false
-var zonedetextf = false
+var zonedetextef = false
 
 
 
@@ -94,7 +94,6 @@ function greenborder(nom) {
 
 
 function func_civilite() {
-  console.info('lol');
   var radio = document.getElementsByName('civilite');
   rad = radio[0].checked || radio[1].checked
   if (!rad) {
@@ -159,7 +158,7 @@ function func_service() {
 }
 
 function log() {
-  console.log(civf, nomf, prenomf, servicef);
+  console.log(civf, nomf, prenomf, servicef, zonedetextef);
   
 }
 
