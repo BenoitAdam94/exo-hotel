@@ -114,7 +114,9 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 
             </div>
             <div class="row justify-content-center">
-                <form method="get" id="formulaire">
+                <form method="get" id="formulaire" role="form">
+                    <fieldset>
+                    <legend class="text-center"><h2>Nous contacter</h2></legend>
                     <!-- Bouton Radio -->
                     <span id="civ">
                       <label class="form_col">Sexe</label>
@@ -122,41 +124,35 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                       <input type="radio" name="civilite" value="f" id="femme" blur="func_civilite"> Femme <strong id="civilite_verif"></strong>
                     </span>
                     <br><br>
-                    <label class="form_col" for="nom">Nom*</label class="form_col">
+                    <label for="nom" class="form_col" for="nom">Nom*</label class="form_col">
                     <input id="nom" type="text" name="nom" placeholder="Votre Nom" onblur="func_nom()" required> <strong id="nom_verif"></strong>
                     <br><br>
-                    <label class="form_col" for="prenom">Prénom*</label class="form_col">
+                    <label for="prenom" class="form_col" for="prenom">Prénom*</label class="form_col">
                     <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="prenom_verif"></strong>
-                    <br><br>
-                    <label class="form_col" for="age">Age*</label class="form_col">
-                    <input id="age" type="text" name="age" placeholder="Votre Age" onblur="func_age()" required> <strong id="age_verif"></strong>
-                    <br><br>
-                    <!-- get = visible // post = invisible-->
-                    <label class="form_col" for="pseudo">Pseudo*</label class="form_col">
-                    <input id="pseudo" type="text" name="pseudo" placeholder="Votre Peudo" onblur="func_pseudo()" required> <strong id="pseudo_verif"></strong>
-                    <br><br>
-                    <!-- Mot De Passe -->
-                    <label class="form_col" for="motdepasse1">Mot de passe</label class="form_col">
-                    <input type="password" name="mdp1" id="motdepasse1" onblur="func_mdp1()" required> <strong id="pwd1_verif"></strong>
-                    <br><br>
-                    <label class="form_col" for="motdepasse2">Mot de passe (Confirmation)</label class="form_col">
-                    <input type="password" name="mdp2" id="motdepasse2" onblur="func_mdp2()" required> <strong id="pwd2_verif"></strong>
-                    <br><br>
-                    <!-- Pays-->
-                    <label class="form_col" for="pays">Pays</label class="form_col">
-                    <select id="pays" name="Pays" onblur="func_pays()" required>
-                      <option disabled selected value="0">Selectionnez votre pays</option>
-                      <optgroup label="Europe">
-                        <option value="fr" id="fr">France</option>
-                        <option value="es" id="es">Espagne</option>
-                        <option value="it" id="it">Italie</option>
-                      </optgroup>
-                      <optgroup label="Asie"></optgroup>
-                      <option value="jp" id="jp">Japan</option>
-                      <option value="cn" id="cn">China</option>
-                      <option value="ca" id="ca">Cambodge</option>
-                    </select> <strong id="pays_verif"></strong>
                     <br>
+                    <br>
+                    <!-- Email-->
+                    <label for="email" class="form_col">Votre Adresse e-mail*</label class="form_col">
+                    <input id="email" type="email" name="email" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="email_verif"></strong>
+                    <br>
+                    <!-- Service concerné -->
+                    <label for="service" class="form_col" for="service">Service concerné</label class="form_col">
+                    <select id="service" name="service" onblur="func_service()" required>
+                      <option disabled selected value="0">Selectionnez le service</option>
+                      <option value="accueil" id="accueil">Général-Accueil</option>
+                      <option value="chambre" id="chambre">Chambre</option>
+                      <option value="restaurant" id="restaurant">Restaurant</option>
+                      <option value="spa" id="spa">Spa & Soins</option>
+                      <option value="administratif" id="administratif">Administratif</option>
+                      <option value="webmaster" id="china">Webmaster</option>
+                      
+                    </select> <strong id="service_verif"></strong>
+                    <br>
+                    <!-- Zone de texte -->
+                    <label for="zonedetexte" class="form_col" for="zonedetexte">Votre Message*</label class="form_col">
+                        <input id="zonedetexte" type="text" name="zonedetext" placeholder="Votre Message" onblur="func_zonedetexte()" required> <strong id="zonedetexte_verif"></strong>
+                        <br>
+                    <!-- Newsletter -->
                     <label class="form_col"></label>
                     <input type="checkbox" name="newsletter" value="newsletter" id="newsletter"> Je désire recevoir la newsletter chaque mois
                   
@@ -166,6 +162,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <input type="reset" value="reset" name="reset">
                     
                     <br>
+                </fieldset>
                   </form>
             </div>
             <!-- ****** -->

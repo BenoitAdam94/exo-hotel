@@ -1,3 +1,7 @@
+function d(arg) {
+  document.write('<p>' + arg + '</p>')
+}
+
 /* Smooth Scroll */
 
 $('a[href^="#"]').click(function(){
@@ -67,19 +71,14 @@ $(document).ready(function(){
 
 /* ****** Formulaire de contact ****** */
 
-function d(arg) {
-    document.write('<p>' + arg + '</p>')
-  }
+
 
 
 var civf = false
 var nomf = false
 var prenomf = false
-var agef = false
-var pseudof = false
-var mdp1f = false
-var mdp2f = false
-var paysf = false
+var servicef = false
+var zonedetextf = false
 
 
 
@@ -91,14 +90,7 @@ function greenborder(nom) {
   nom.style.border = "2px solid green";
   }  
 
-function func_formcomplete() {
-  /*
-  if (civf && nomf && prenomf && agef && pseudof && mdp1f && mdp2f && paysf) {
-    soumettre.removeAttribute("disabled");
-  }else{
-    soumettre.setAttribute("disabled", "");
-  }*/
-}
+
 
 
 function func_civilite() {
@@ -112,7 +104,6 @@ function func_civilite() {
     civilite_verif.innerHTML = '';
     civf = true;
   }
-  func_formcomplete();
 }
 
 function func_nom() {
@@ -125,7 +116,6 @@ function func_nom() {
     greenborder(nom);
     nomf = true;
   }
-  func_formcomplete();
 }
 
 function func_prenom() {
@@ -138,84 +128,44 @@ function func_prenom() {
     greenborder(prenom);
     prenomf = true;
   }
-  func_formcomplete();
 }
 
-function func_age() {
-  agevalue = parseInt(age.value);
-  if (agevalue < 5 || agevalue > 140 ) {
-    age_verif.innerHTML = 'Entrez un chiffre entre 5 et 140';
-    redborder(age);
-    agef = false;
+function func_zonedetexte() {
+  if (zonedetexte.value.length < 20) {
+    zonedetexte_verif.innerHTML = 'Minimum 20 charactères';
+    redborder(zonedetexte);
+    zonedetextef = false;
   }else{
-    age_verif.innerHTML = '';
-    greenborder(age);
-    agef = true;
+    zonedetexte_verif.innerHTML = '';
+    greenborder(zonedetexte);
+    zonedetextef = true;
   }
-  func_formcomplete();
 }
 
-function func_pseudo() {
-  if (pseudo.value.length < 5) {
-    pseudo_verif.innerHTML = 'Minimum 5 charactères';
-    redborder(pseudo);
-    pseudof = false;
-  }else{
-    pseudo_verif.innerHTML = '';
-    greenborder(pseudo);
-    pseudof = true;
-  }
-  func_formcomplete();
-}
 
-function func_mdp1() {
-  if (motdepasse1.value.length < 5) {
-    pwd1_verif.innerHTML = 'Minimum 5 charactères';
-    redborder(motdepasse1);
-    mdp1f = false;
-  }else{
-    pwd1_verif.innerHTML = '';
-    greenborder(motdepasse1);
-    mdp1f = true;
-  }
-  func_formcomplete();
-}
 
-function func_mdp2() {
-  if (motdepasse2.value != motdepasse1.value) {
-    pwd2_verif.innerHTML = 'Le mdp doit être identique';
-    redborder(motdepasse2);
-    mdp2f = false;
-  }else{
-    pwd2_verif.innerHTML = '';
-    greenborder(motdepasse2);
-    mdp2f = true;
-  }
-  func_formcomplete();
-}
  
-function func_pays() {
-  if (pays.value == 0)
+function func_service() {
+  if (service.value == 0)
   {
-    pays_verif.innerHTML = 'Selectionnez un pays';
-    redborder(pays);
-    paysf = false;
+    service_verif.innerHTML = 'Selectionnez un service';
+    redborder(service);
+    servicef = false;
   }else{
-    pays_verif.innerHTML = '';
-    greenborder(pays);
-    paysf = true;
+    service_verif.innerHTML = '';
+    greenborder(service);
+    servicef = true;
   }
-  func_formcomplete();
 }
 
 function log() {
-  console.log(civf, nomf, prenomf, agef, pseudof, mdp1f, mdp2f, paysf);
+  console.log(civf, nomf, prenomf, servicef);
   
 }
 
 function inscription() {
   log();
-  if (civf && nomf && prenomf && agef && pseudof && mdp1f && mdp2f && paysf) {
+  if (civf && nomf && prenomf && servicef && zonedetextef) {
     alert('Inscription ok');
     event.preventDefault();
   }else{
