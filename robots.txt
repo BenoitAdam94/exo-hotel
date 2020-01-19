@@ -1,0 +1,4 @@
+Sitemap: https://theunchained.net/sitemap.xml
+Sitemap: https://theunchained.net/news-sitemap.xml
+User-agent: *
+Allow: /wp-admin/admin-ajax.php
