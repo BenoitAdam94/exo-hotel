@@ -113,10 +113,40 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
                 
             </div>
-            <div>
-
-                page vide
-
+            <div class="text-center">
+            <h2> Reservation</h2>
+            </div>
+            <div class="text-left">
+            <form method="get" id="formulaire" role="form">
+                <label for="datepicker" class="form_class">Date de d'arrivée</label>
+                <input type="text" id="date_arv">
+                <br>
+                <label for="datepicker" class="form_class">Date de de départ</label>
+                <input type="text" id="date_dep">
+                <br>
+                <label for="adultes" class="form_class" for="adultes">Nombre d'adultes :</label>
+                <select id="adultes" name="adultes" onblur="func_adultes()" required>
+                    <option value="1" id="1_adulte">1</option>
+                    <option value="2" id="2_adulte">2</option>
+                    <option value="3" id="3_adulte">3</option>
+                    <option value="4" id="4_adulte">4</option>
+                </select>
+                <br>
+                <label for="enfant" class="form_class" for="enfant">Nombre d'enfant :</label>
+                <select id="enfant" name="enfant" onblur="func_enfant()" required>
+                    <option value="1" id="1_enfant">1</option>
+                    <option value="2" id="2_enfant">2</option>
+                    <option value="3" id="3_enfant">3</option>
+                    <option value="4" id="4_enfant">4</option>
+                </select>
+                <br>
+                <label class="form_class"></label>
+                <input type="submit" value="Reserver" name="reservation_check" id="soumettre_date">
+            </form>
+            <br>
+                
+            
+            
             </div>
                
             <!-- ****** -->
@@ -164,6 +194,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
+    <script>
+        $( function() {
+    $( "#date_arv" ).datepicker();
+    $( "#date_dep" ).datepicker();
+  } );
+  </script>
     
     <script>
 
