@@ -85,19 +85,23 @@ a:hover{
 }
 
 
-  
-.monBouton{
-      font-size: 20px;
-      border: none;
-      background-color: rgba(148, 136, 30, 0.87);
-      color: white;
-      width: 40%;
-      text-align: center;
+.reserver-style{
+  font-size: 20px;
+  border: none;
+  background-color: rgba(148, 136, 30, 0.87);
+  color: white;
+  width: 40%;
+  text-align: center;
+}
+
+.reserver-position{
       position: absolute;
       right: 0;
 }
 
-
+.w-80 {
+  width: 80% !important;
+}
 
 
 

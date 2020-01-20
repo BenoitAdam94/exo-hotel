@@ -77,6 +77,7 @@ $(document).ready(function(){
 var civf = false
 var nomf = false
 var prenomf = false
+var emailf = false
 var servicef = false
 var zonedetextef = false
 
@@ -94,6 +95,7 @@ function greenborder(nom) {
 
 
 function func_civilite() {
+  
   var radio = document.getElementsByName('civilite');
   rad = radio[0].checked || radio[1].checked
   if (!rad) {
@@ -102,6 +104,7 @@ function func_civilite() {
   }else{
     civilite_verif.innerHTML = '';
     civf = true;
+    console.info(civf);
   }
 }
 
@@ -126,6 +129,25 @@ function func_prenom() {
     prenom_verif.innerHTML = '';
     greenborder(prenom);
     prenomf = true;
+  }
+}
+
+function func_email() {
+  
+  for (i = 0; i < email.value.length; i++) {
+  console.log(email[i]);
+    }
+  if (email.value.length < 7) {
+    email_verif.innerHTML = 'Minimum 7 charactères';
+    redborder(email);
+    emailf = false;
+  if(email.value.length){
+
+  }
+  }else{
+    email_verif.innerHTML = '';
+    greenborder(email);
+    emailf = true;
   }
 }
 
@@ -158,14 +180,15 @@ function func_service() {
 }
 
 function log() {
-  console.log(civf, nomf, prenomf, servicef, zonedetextef);
+  console.log(civf, nomf, prenomf)
+  console.log (emailf, servicef, zonedetextef);
   
 }
 
 function inscription() {
   log();
-  if (civf && nomf && prenomf && servicef && zonedetextef) {
-    alert('Inscription ok');
+  if (civf && nomf && prenomf && emailf && servicef && zonedetextef) {
+    alert('Le message a bien été envoyé');
     event.preventDefault();
   }else{
     alert('Le formulaire est incomplet');
@@ -174,7 +197,6 @@ function inscription() {
   
 }
 
-document.querySelector("#civ").addEventListener("mouseout", func_civilite);
 
 soumettre.addEventListener("click", inscription);
 
