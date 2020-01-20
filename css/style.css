@@ -17,7 +17,7 @@ h1{
 }
 
 
-h2, h3,h4{
+h2,h3,h4,h5,h6{
     color: rgba(148, 136, 30, 0.87);
 }
 
@@ -26,7 +26,11 @@ h2, h3,h4{
   font-weight:bold;
 }
 
-
+.bloc{
+  height: 400px;
+  display: none;
+  border: 1px solid grey;
+}
 
 p, ul{
     font-size: 1em;

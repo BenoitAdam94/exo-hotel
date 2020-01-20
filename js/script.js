@@ -180,9 +180,7 @@ function func_service() {
 }
 
 function log() {
-  console.log(civf, nomf, prenomf)
-  console.log (emailf, servicef, zonedetextef);
-  
+  console.log(civf, nomf, prenomf, emailf, servicef, zonedetextef);
 }
 
 function inscription() {
@@ -198,13 +196,4 @@ function inscription() {
 }
 
 
-soumettre.addEventListener("click", inscription);
-
-
-
-/*
-document.querySelector("#checkbox").addEventListener("click", function(event) {
-  alert('formulaire non rempli');
-  event.preventDefault();
-}, false);
-*/
+// soumettre.addEventListener("click", inscription);

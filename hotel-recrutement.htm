@@ -113,15 +113,81 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
                 
             </div>
-            <div>
-
-                page vide
-
+            <div class="row p-2">
+                <h2 class="text-center">Carrières</h2>
+                <br>
+                <p>Vous avez la fibre du service ? Vous possedez une formation en hotelerie/restauration ou une expérience significative dans le domaine ?/<p>
+                <p>Alors rejoignez-nous ! L'HOTELCOP et sa filialle est constemment à l'écoute de nouveaux talents.</p>
             </div>
+            <div class="row p-2">
+                <h2 class="text-center"></h2>
+            </div>
+            <div class="row p-2 justify-content-around">
+                <div class="col-sm-3 border p-2">
+                <h3>Restauration</h3>
+                    <button id="bouton-1">Voir les offres</button>
+                    <div class="col-12 bloc p-2 m-2" id="bloc-1">
+                    <h4>Serveur-Serveuses</h4>
+                    <p>Restaurant brasserie situé rue Montorgueil à Paris recherche des SERVEURS(SES) expérimentés et motivés, en service continu avec 2 jours de repos consé</p>
+                    <form>
+                        <div class="form-group">
+                          <label for="cv">CV</label>
+                          <input type="file" class="form-control-file" id="cv">
+                        </div>
+                        <div class="form-group">
+                            <label for="lm">Lettre de motivation</label>
+                            <input type="file" class="form-control-file" id="lm">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="col-sm-3 border p-2">
+                    <h3>Hôtelerie</h3>
+                        <button id="bouton-2">Voir les offres</button>
+                        <div class="col-12 bloc p-2 m-2" id="bloc-2">
+                        <h4>Hôte d'accueil</h4>
+                        <p>Nous sommes actuellement à la recherche d'un(e) hôte(sse) d'accueil. Travail de nuit 1 semaine sur 3. Ponctualité et sérieux exigée.</p>
+                        <form>
+                            <div class="form-group">
+                              <label for="cv">CV</label>
+                              <input type="file" class="form-control-file" id="cv">
+                            </div>
+                            <div class="form-group">
+                                <label for="lm">Lettre de motivation</label>
+                                <input type="file" class="form-control-file" id="lm">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
+                        </form>
+                        </div>
+                    </div>
+                <div class="col-sm-3 border p-2">
+                <h3>Evennementiel</h3>
+                    <button id="bouton-3">Voir les offres</button>
+                    <div class="col-12 bloc p-2 m-2" id="bloc-3">
+                    <h4>Assistant d'organisation evenementiel</h4>
+                    <p>Dans le cadre de l'acroissement de nos équipes, nous cherchons un assistant en organisation d'evennements (Mariage, Pacs, Barmitsva, Noces d'argents, coktail d'entreprises)</p>
+                    <form>
+                        <div class="form-group">
+                          <label for="cv">CV</label>
+                          <input type="file" class="form-control-file" id="cv">
+                        </div>
+                        <div class="form-group">
+                            <label for="lm">Lettre de motivation</label>
+                            <input type="file" class="form-control-file" id="lm">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+                
                
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
+            
             <footer class="row footer justify-content-around">
                 
                 <div class="col-sm-5 p-4">
@@ -164,7 +230,17 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
-    
+    <script>
+        $('#bouton-1').click(function() {
+            $('#bloc-1').slideToggle()
+        });
+        $('#bouton-2').click(function() {
+            $('#bloc-2').slideToggle()
+        });
+        $('#bouton-3').click(function() {
+            $('#bloc-3').slideToggle()
+        });
+    </script>
     <script>
 
     </script>
