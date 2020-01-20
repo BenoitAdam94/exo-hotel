@@ -62,7 +62,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <div class="col-sm-4 text-right d-none d-lg-block">
                     <span>FR / </span><span> &nbsp; EN</span>
                     <br>
-                    <div class="monBouton mr-5">Réserver</div>
                 </div>
             </div>
             <div class="row menunav">
@@ -158,6 +157,28 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
 
             </div>
+
+            <form method="get" action="formulaire.html">
+
+                <label for="thematique"></label>
+                <select name="thematique">
+                    <option disabled selected>Sélectionner votre thématique</option>
+                        <option value="fr">Général</option>
+                        <option value="es">Chambres</option>
+                        <option value="it">Restaurant</option>
+                        <option value="la">Spa</option>
+                </select>
+            <hr>
+            <label for="commentaire"></label>
+            <textarea id="commentaire" name="commentaire" rows="10" cols="90" placeholder="Votre commentaire"></textarea>
+            <hr>
+
+            <!--input "submit" qui valide le formulaire-->
+            <input type="submit" value="Envoyer le commentaire" name="commentaire" >
+    
+            </form>
+      
+    
                
             <!-- ****** -->
             <!-- footer -->
