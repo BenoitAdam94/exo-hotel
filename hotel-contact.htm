@@ -113,10 +113,15 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
                 
             </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Nous Contacter</h2>
+                </div>
+            </div>
             <div class="row justify-content-center p-3">
-                <form method="get" id="formulaire" role="form">
+                <form method="get" id="formulaire">
                     <fieldset>
-                    <legend class="text-center"><h2>Nous contacter</h2></legend>
+                    <legend class="text-center">Remplissez le formulaire pour nous contacter, réponse sous 48h maximum.</legend>
                     <!-- Radio (BootStrap) 
                     <div class="form-check">
                         <input class="form-check-input" id="homme" type="radio" name="civilite" value="h" blur="func_civilite()">
@@ -170,7 +175,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="form-group">
                         <label for="service">Service concerné*</label>
                         <select id="service" class="form-control" name="service" onblur="func_service()" required>
-                            <option disabled selected value="0">Selectionnez le service</option>
+                            <option disabled selected value="">Selectionnez le service</option>
                             <option value="accueil" id="accueil">Accueil - Général</option>
                             <option value="evenementiel" id="evenementiel">Evenementiel</option>
                             <option value="chambre" id="chambre">Chambres</option>
@@ -184,7 +189,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <!-- Zone de texte (Bootstrap) -->
                     <div class="form-group">
                         <label for="zonedetexte">Votre Message*</label>
-                        <textarea id="zonedetexte" class="form-control" type="textarea" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
+                        <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
                         <strong id="zonedetexte_verif"></strong>
                     </div>
                     <!-- Zone de texte (me)
