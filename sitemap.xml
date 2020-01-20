@@ -8,8 +8,74 @@
 
 
 <url>
-  <loc>https://www.spiralstatic.eu/</loc>
-  <lastmod>2020-01-01T13:18:15+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/index.htm</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/chambres-et-gammes.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/restaurant-et-carte.htm</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/spa-soin.htm</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotel-evenements.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotel-presse.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/avis.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotel-acces.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotel-contact.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/mentions-legales.htm</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/CGV.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/actualites.htm</loc>
+  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotel-recrutement.htm</loc>
+  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
