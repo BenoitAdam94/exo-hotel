@@ -16,12 +16,17 @@ h1{
     color: rgb(110, 107, 107);
 }
 
-h3,h4{
+
+h2, h3,h4{
     color: rgba(148, 136, 30, 0.87);
-    font-family: 'Parisienne';
-    font-weight:bold;
-    font-size:1.7em;
 }
+
+.parisienne{
+  font-family: 'Parisienne';
+  font-weight:bold;
+}
+
+
 
 p, ul{
     font-size: 1em;
@@ -42,7 +47,6 @@ a:hover{
 .text-legende{
     padding-left: 12%;
     padding-bottom: 8%;
-    
 }
 
 #zonedetexte{
@@ -78,24 +82,26 @@ a:hover{
 .text-shadow, .boutons h2{
     text-shadow: 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111;
     color:#eee;
-    font-family: 'Parisienne';
-    font-weight:bold;
 }
 
 
-  
-.monBouton{
-      font-size: 20px;
-      border: none;
-      background-color: rgba(148, 136, 30, 0.87);
-      color: white;
-      width: 40%;
-      text-align: center;
+.reserver-style{
+  font-size: 20px;
+  border: none;
+  background-color: rgba(148, 136, 30, 0.87);
+  color: white;
+  width: 40%;
+  text-align: center;
+}
+
+.reserver-position{
       position: absolute;
       right: 0;
 }
 
-
+.w-80 {
+  width: 80% !important;
+}
 
 
 
