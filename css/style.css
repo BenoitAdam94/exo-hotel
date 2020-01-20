@@ -44,6 +44,10 @@ a:hover{
     color:#111;
 }
 
+.ensavoirplus-position{
+  bottom: 10vh;
+}
+
 .text-legende{
     padding-left: 12%;
     padding-bottom: 8%;
