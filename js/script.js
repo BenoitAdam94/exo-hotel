@@ -15,6 +15,7 @@ $('a[href^="#"]').click(function(){
 	return false;
 });
 
+
 /* Search Bar responsive menu */
 
 function searchbargrow(mediax) {
@@ -35,8 +36,6 @@ function searchbargrow(mediax) {
   var mediax = window.matchMedia("(max-width: 992px)");
   searchbargrow(mediax);
   mediax.addListener(searchbargrow);
-
-  
 
 /* Lydie */
 
@@ -64,15 +63,26 @@ $(document).ready(function(){
 	$('.nav-item').mouseout(function(){   
 			$(this).css('color','grey');
 		});
-
-
 });
 
+/* heure repas selon Midi ou Soir */
+
+$('#midi_h').show();
+$('#soir_h').hide();
+
+function func_midisoir() {  
+  var radio = document.getElementsByName('midisoir');  
+  if (radio[0].checked) {
+    $('#soir_h').hide();
+    $('#midi_h').show(); 
+  }
+  else if (radio[1].checked) {
+    $('#midi_h').hide();
+    $('#soir_h').show();
+  }
+}
 
 /* ****** Formulaire de contact ****** */
-
-
-
 
 var civf = false
 var nomf = false
@@ -80,8 +90,6 @@ var prenomf = false
 var emailf = false
 var servicef = false
 var zonedetextef = false
-
-
 
 function redborder(nom) {
   nom.style.border = "2px solid red";
@@ -91,11 +99,7 @@ function greenborder(nom) {
   nom.style.border = "2px solid green";
   }  
 
-
-
-
 function func_civilite() {
-  
   var radio = document.getElementsByName('civilite');
   rad = radio[0].checked || radio[1].checked
   if (!rad) {
@@ -162,9 +166,6 @@ function func_zonedetexte() {
     zonedetextef = true;
   }
 }
-
-
-
  
 function func_service() {
   if (service.value == 0)
@@ -192,7 +193,6 @@ function inscription() {
     alert('Le formulaire est incomplet');
     event.preventDefault();
   }
-  
 }
 
 
