@@ -84,27 +84,33 @@ function func_midisoir() {
 
 /* Image reservation */
 
-$('#chambre-resa').hide();
+$('#chambre-resa').show();
 $('#table-resa').hide();
 $('#soin-resa').hide();
 
-$('#chambre-tab').click(function() {
-  $('#chambre-resa').show();
+
+function func_chambre_img() {  
+  console.log('chambre');
   $('#table-resa').hide();
   $('#soin-resa').hide();
-});
+  $('#chambre-resa').show();
+}
 
-$('table-tab').click(function() {
+function func_table_img() { 
+  console.log('table');
   $('#chambre-resa').hide();
-  $('#table-resa').show();
   $('#soin-resa').hide();
-});
+  $('#table-resa').show();
+}
 
-$('#soin-tab').click(function() {
+function func_soins_img() { 
+  console.log('soin');
   $('#chambre-resa').hide();
   $('#table-resa').hide();
   $('#soin-resa').show();
-});
+}
+
+
 
 /* ****** Formulaire de contact ****** */
 

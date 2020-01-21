@@ -113,16 +113,16 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
                 
             </div>
-            <div class="text-center">
+            <div class="text-center p-2">
             <h2>Réservation</h2>
             </div>
             <div class="row text-left p-2 form-group justify-content-around min-vh-65">
             <div class="col-sm-4">
             <div id="tabs">
                 <ul>
-                    <li><a href="#tabs-1"><h2 class="tab">Chambre</h2></a></li>
-                    <li><a href="#tabs-2"><h2 class="tab">Table</h2></a></li>
-                    <li><a href="#tabs-3"><h2 class="tab">Soin</h2></a></li>
+                    <li><a href="#tabs-1" onclick="func_chambre_img()"><h2 class="tab">Chambre</h2></a></li>
+                    <li><a href="#tabs-2" onclick="func_table_img()"><h2 class="tab">Table</h2></a></li>
+                    <li><a href="#tabs-3" onclick="func_soins_img()"><h2 class="tab">Soin</h2></a></li>
                 </ul>
                 <!-- ******************* -->
                 <!-- 1ere TAB : Chambres -->
@@ -136,7 +136,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <label for="date_dep">Date de départ</label>
                         <input type="text" class="form-control" id="date_dep">
                         <br>
-                        <label for="adultes">Nombre d'adultes :</label>
+                        <label for="adultes">Nombre d'adultes</label>
                         <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
                             <option disabled value="">&nbsp;</option>
                             <option value="1" id="1_adulte">1</option>
@@ -145,7 +145,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="4" id="4_adulte">4</option>
                         </select>
                         <br>
-                        <label for="enfant">Nombre d'enfants :</label>
+                        <label for="enfant">Nombre d'enfants</label>
                         <select id="enfant" class="form-control" name="enfant" onblur="func_enfant()" required>
                             <option disabled value="">&nbsp;</option>
                             <option value="0" id="0_enfant">0</option>
@@ -155,8 +155,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="4" id="4_enfant">4</option>
                         </select>
                         <br>
-                        <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-chambre">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="reservation_check" id="soumettre-chambre">Réserver une chambre</button>
                     </form>
                     </div>
                 </div>
@@ -166,7 +165,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <div id="tabs-2">
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-table">
-                        <label for="date_table">Date table</label>
+                        <label for="date_table">Date</label>
                         <input type="text" class="form-control" id="date_table">
                         <br>
                         <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
@@ -174,7 +173,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <br>
                         <span id="midi_h">
-                            <label for="midi_heure">Heure :</label>
+                            <label for="midi_heure">Heure</label>
                             <select id="midi_heure" class="form-control" name="midi_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="12h00" id="12h00">12h</option>
@@ -184,7 +183,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </select>
                         </span>
                         <span id="soir_h">
-                            <label for="soir_heure">Heure :</label>
+                            <label for="soir_heure">Heure</label>
                             <select id="soir_heure" class="form-control" name="soir_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="19h00" id="19h00">19h</option>
@@ -196,7 +195,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <script>
                         </script>
                         <br>
-                        <label for="personnes">Nombre de personnes :</label>
+                        <label for="personnes">Nombre de personnes</label>
                         <select id="personnes" class="form-control" name="personnes" onblur="func_personnes()" required>
                             <option disabled selected value="">&nbsp;</option>
                             <script>
@@ -206,8 +205,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             </script>
                         </select>
                         <br>
-                        <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-table">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="reservation_check" id="soumettre-table">Réserver une table</button>
                     </form>
                     </div>
                 </div>
@@ -217,29 +215,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <div id="tabs-3">
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-soin">
-                        <label for="date_soin">Date du soin</label>
+                        <label for="date_soin">Date</label>
                         <input type="text" class="form-control" id="date_soin">
                         <br>
-                        <label for="typesoin">Type de Soins :</label>
-                        <select id="typesoin" class="form-control" name="typesoin" onblur="func_typesoin()" required>
-                            <option disabled selected value="">&nbsp;</option>
-                            <option value="1" id="detente">Détente</option>
-                            <option value="2" id="decouverte">Découverte</option>
-                            <option value="3" id="relaxant">Relaxant</option>
-                            <option value="4" id="plaisir">Plaisir</option>
-                            <option value="5" id="evasion">Evasion</option>
-                        </select>
-                        <br>
-                        <label for="adultes-soin">Nombre d'adultes :</label>
-                        <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
-                            <option disabled selected value="">&nbsp;</option>
-                            <option value="1" id="1_adulte-soin">1</option>
-                            <option value="2" id="2_adulte-soin">2</option>
-                            <option value="3" id="3_adulte-soin">3</option>
-                            <option value="4" id="4_adulte-soin">4</option>
-                        </select>
-                        <br>
-                        <label for="heuresoin">Heure :</label>
+                        <label for="heuresoin">Heure</label>
                         <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
                             <option disabled selected value="">&nbsp;</option>
                             <script>
@@ -249,8 +228,26 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             </script>
                         </select>
                         <br>
-                        <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-soins">
+                        <label for="typesoin">Type de Soins</label>
+                        <select id="typesoin" class="form-control" name="typesoin" onblur="func_typesoin()" required>
+                            <option disabled selected value="">&nbsp;</option>
+                            <option value="1" id="detente">Détente</option>
+                            <option value="2" id="decouverte">Découverte</option>
+                            <option value="3" id="relaxant">Relaxant</option>
+                            <option value="4" id="plaisir">Plaisir</option>
+                            <option value="5" id="evasion">Evasion</option>
+                        </select>
+                        <br>
+                        <label for="adultes-soin">Nombre d'adultes</label>
+                        <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
+                            <option disabled selected value="">&nbsp;</option>
+                            <option value="1" id="1_adulte-soin">1</option>
+                            <option value="2" id="2_adulte-soin">2</option>
+                            <option value="3" id="3_adulte-soin">3</option>
+                            <option value="4" id="4_adulte-soin">4</option>
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="reservation_check" id="soumettre-soins">Réserver un soin</button>
                     </form>
                     </div>
                 </div>
@@ -308,6 +305,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
         $( function() {
             $( "#date_arv" ).datepicker();
             $( "#date_dep" ).datepicker();
+            $( "#date_table" ).datepicker();
+            $( "#date_soin" ).datepicker();
         } );
         $( function() {
             $( "#tabs" ).tabs();
