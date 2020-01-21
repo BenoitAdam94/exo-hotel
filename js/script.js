@@ -40,13 +40,13 @@ function searchbargrow(mediax) {
 /* Lydie */
 
 $(document).ready(function(){
-	$(".monBouton").click(function(){
+	$(".reserver-style").click(function(){
 		location.href="reservation.htm";
 	});
-	$('.monBouton').mouseout(function(){   
+	$('.reserver-style').mouseout(function(){   
 			$(this).css({'background-color':'rgba(148, 136, 30, 0.87)','color':'white'});
 		});
-	$('.monBouton').mouseover(function(){   
+	$('.reserver-style').mouseover(function(){   
 			$(this).css({'color':'rgba(148, 136, 30, 0.87)','background-color':'white'});
 		});
 	$('span').hover(
