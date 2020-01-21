@@ -97,6 +97,24 @@ a:hover{
   border-color: rgba(148, 136, 30, 0.87) !important;
   color: white !important;
 }
+
+
+.ui-tabs-tab, .ui-tabs-anchor{
+  background-color:rgba(148, 136, 30, 0.87) !important;
+  border-left: rgba(148, 136, 30, 0.87) !important;
+  border-right: rgba(148, 136, 30, 0.87) !important;
+  border-top: rgba(148, 136, 30, 0.87) !important;
+}
+
+
+/*
+.darkkkdoie{
+  background-color: black !important;
+  border-color: black !important;
+  border-bottom: 0px transparent red;
+  color: white !important;
+}*/
+
 /*
 #tabs a:focus{
   background-color: rgba(148, 136, 30, 0.87);
