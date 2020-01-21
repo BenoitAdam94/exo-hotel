@@ -147,30 +147,64 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <p><strong>Avis "Chambre": </strong>Client anonyme<br>12-oct.-2020<br>
                             Nous avons passé une excellente nuit, la chambre avec vue sur la tour Eiffel avec baignoire est juste géniale. Tout était parfait (le Champagne, les vrais pétales de roses). Je recommande vivement cet hôtel. L'accueil était génial et la chambre vraiment sublime.</p>
                     </div>
-                    <div class="col-sm-12 ">    
-                        <p><strong>Avis "Restaurant" : </strong>Client anonyme<br>12-oct.-2020<br> 
-                            Un repas en famille à Hôtelcop est un souvenir marquant. Le lieu est magique, les plats sont succulents et les vins bien choisis grâce aux conseil de notre hôtesse. (Excellente idée d'avoir comme interlocutrice la même personne à la commande et pour les conseils oenologiques !).</p>
-                    </div>
-                        
-                    <div class="col-sm-12 ">    
-                    <p><strong>Avis "Restaurant" : </strong>Client anonyme<br>12-oct.-2020<br>
-                        Très belle qualité des plats et cadre inspirant. La qualité des plats est égale de l'entrée au dessert. C'est varié, mais jamais décevant. Le service est discret et efficace. </p>
-                </div>
-                <div class="col-sm-12">    
-                    <p><strong>Avis "Spa" : </strong>Brian SMITH<br>3-oct.-2020<br>
-                        Spa magnifique et à la hauteur d'un 5 étoiles. Le soin parfait et relaxant. Expérience à refaire.</p>
-                </div>
-                <div class="col-sm-12">    
-                    <p><strong>Avis "Spa" : </strong>Client anonyme<br>30-sept.-2020<br>
-                        Le spa est juste dingue, un très bon accueil ! Si vous voulez des massages de qualité, c'est la bonne adresse. Privilégiez la semaine.</p>
-                </div>
+
 
             </div>
             
+           <!--Partie avec onglets-->
+            
+           <div class="row text-left p-2 form-group justify-content-around min-vh-65">
+            <div class="col-lg-4">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1" onclick="func_chambre_img()"><h2 class="tab">Avis Général</h2></a></li>
+                    <li><a href="#tabs-2" onclick="func_table_img()"><h2 class="tab">Avis "Chambres"</h2></a></li>
+                    <li><a href="#tabs-3" onclick="func_soins_img()"><h2 class="tab">Avis "Restaurant"</h2></a></li>
+                    <li><a href="#tabs-4" onclick="func_soins_img()"><h2 class="tab">Avis "Spa"</h2></a></li>
+                </ul>
+                <!-- ******************* -->
+                <!-- 1ere TAB : Général -->
+                <!-- ******************* -->
+            <div>
+                    
+            </div>
+                <!-- **************** -->
+                <!-- 2eme TAB : Chambres-->
+                <!-- **************** -->
+            <div>
+
+            </div>
+                <!-- 3eme TAB : Restaurant-->
+                <!-- **************** -->
+                <div class="col-sm-12 ">    
+                    <p><strong>Avis "Restaurant" : </strong>Client anonyme<br>12-oct.-2020<br> 
+                        Un repas en famille à Hôtelcop est un souvenir marquant. Le lieu est magique, les plats sont succulents et les vins bien choisis grâce aux conseil de notre hôtesse. (Excellente idée d'avoir comme interlocutrice la même personne à la commande et pour les conseils oenologiques !).</p>
+                </div>
+                    
+                <div class="col-sm-12 ">    
+                <p><strong>Avis "Restaurant" : </strong>Client anonyme<br>12-oct.-2020<br>
+                    Très belle qualité des plats et cadre inspirant. La qualité des plats est égale de l'entrée au dessert. C'est varié, mais jamais décevant. Le service est discret et efficace. </p>
+            </div>
+                <!-- 3eme TAB : Spa -->
+                <!-- **************** -->
+                <div id="tabs-3">
+                    <div class="col-sm-12">    
+                        <p><strong>Avis "Spa" : </strong>Brian SMITH<br>3-oct.-2020<br>
+                        Spa magnifique et à la hauteur d'un 5 étoiles. Le soin parfait et relaxant. Expérience à refaire.</p>
+                    </div>
+                    <div class="col-sm-12">    
+                    <p><strong>Avis "Spa" : </strong>Client anonyme<br>30-sept.-2020<br>
+                        Le spa est juste dingue, un très bon accueil ! Si vous voulez des massages de qualité, c'est la bonne adresse. Privilégiez la semaine.</p>
+                    </div>
+                </div>
+       
+
                 <div class="col-12 text-center mt-5">
                     <h4>Vous souhaitez nous laisser un avis</h4>
                 </div>
-           
+            
+
+            <!--Formulaire-->
             <div class="row justify-content-center p-3">
             <form method="get" action="formulaire.html">
                 <label for="nom">Votre nom</label>
