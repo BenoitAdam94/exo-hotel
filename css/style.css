@@ -7,7 +7,7 @@ body{
     max-width:1600px;
 }
 
-div{
+ffdiv{
     border:2px solid #333;
 }
 
@@ -59,6 +59,10 @@ a:hover{
 
 #zonedetexte{
   height:100px;
+}
+
+.min-vh-65 {
+  min-height: 65vh !important;
 }
 
 /* Caroussel */
