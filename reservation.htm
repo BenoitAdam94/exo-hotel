@@ -116,130 +116,141 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             <div class="text-center">
             <h2>Réservation</h2>
             </div>
-            <div class="row p-2">
-                <h3>Réserver une chambre</h3>
-            </div>
             <div class="row text-left p-2 form-group">
-            <div class="p-2">
-            <form method="get" id="formulaire">
-                <label for="date_arv">Date d'arrivée</label>
-                <input type="text" class="form-control" id="date_arv">
-                <br>
-                <label for="date_dep">Date de départ</label>
-                <input type="text" class="form-control" id="date_dep">
-                <br>
-                <label for="adultes">Nombre d'adultes :</label>
-                <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
-                    <option value="1" id="1_adulte">1</option>
-                    <option value="2" id="2_adulte">2</option>
-                    <option value="3" id="3_adulte">3</option>
-                    <option value="4" id="4_adulte">4</option>
-                </select>
-                <br>
-                <label for="enfant">Nombre d'enfants :</label>
-                <select id="enfant" class="form-control" name="enfant" onblur="func_enfant()" required>
-                    <option value="0" id="0_enfant">0</option>
-                    <option value="1" id="1_enfant">1</option>
-                    <option value="2" id="2_enfant">2</option>
-                    <option value="3" id="3_enfant">3</option>
-                    <option value="4" id="4_enfant">4</option>
-                </select>
-                <br>
-                <label class="form_class"></label>
-                <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
-            </form>
+            <div id="tabs" class="">
+                <ul>
+                    <li><a href="#tabs-1"><h2 class="tab">Chambre</h2></a></li>
+                    <li><a href="#tabs-2"><h2 class="tab">Table</h2></a></li>
+                    <li><a href="#tabs-3"><h2 class="tab">Soin</h2></a></li>
+                </ul>
+                <!-- ******************* -->
+                <!-- 1ere TAB : Chambres -->
+                <!-- ******************* -->
+                <div id="tabs-1">
+                    <div class="p-2 form-group">
+                    <form method="get" id="formulaire">
+                        <label for="date_arv">Date d'arrivée</label>
+                        <input type="text" class="form-control" id="date_arv">
+                        <br>
+                        <label for="date_dep">Date de départ</label>
+                        <input type="text" class="form-control" id="date_dep">
+                        <br>
+                        <label for="adultes">Nombre d'adultes :</label>
+                        <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
+                            <option value="1" id="1_adulte">1</option>
+                            <option value="2" id="2_adulte">2</option>
+                            <option value="3" id="3_adulte">3</option>
+                            <option value="4" id="4_adulte">4</option>
+                        </select>
+                        <br>
+                        <label for="enfant">Nombre d'enfants :</label>
+                        <select id="enfant" class="form-control" name="enfant" onblur="func_enfant()" required>
+                            <option value="0" id="0_enfant">0</option>
+                            <option value="1" id="1_enfant">1</option>
+                            <option value="2" id="2_enfant">2</option>
+                            <option value="3" id="3_enfant">3</option>
+                            <option value="4" id="4_enfant">4</option>
+                        </select>
+                        <br>
+                        <label class="form_class"></label>
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
+                    </form>
+                    </div>
+                </div>
+                <!-- **************** -->
+                <!-- 2eme TAB : Table -->
+                <!-- **************** -->
+                <div id="tabs-2">
+                    <div class="p-2 form-group">
+                    <form method="get" id="formulaire">
+                        <label for="date_table">Date table</label>
+                        <input type="text" class="form-control" id="date_table">
+                        <br>
+                        <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
+                        <input type="radio" name="midisoir" value="s" id="soir" onclick="func_midisoir()" onblur="func_midisoir()"> Soir
+                        <br>
+                        <br>
+                        <span id="midi_h">
+                            <label for="midi_heure">Heure :</label>
+                            <select id="midi_heure" class="form-control" name="midi_heure" required>
+                            <option value="12h00" id="12h00">12h</option>
+                            <option value="12h30" id="12h30">12h30</option>
+                            <option value="13h00" id="13h00">13h00</option>
+                            <option value="13h30" id="13h30">13h30</option>
+                        </select>
+                        </span>
+                        <span id="soir_h">
+                            <label for="soir_heure">Heure :</label>
+                            <select id="soir_heure" class="form-control" name="soir_heure" required>
+                            <option value="19h00" id="19h00">19h</option>
+                            <option value="19h30" id="19h30">19h30</option>
+                            <option value="20h00" id="20h00">20h00</option>
+                            <option value="20h30" id="20h30">20h30</option>
+                        </select>
+                        </span>
+                        <script>
+                        </script>
+                        <br>
+                        <label for="personnes">Nombre de personnes :</label>
+                        <select id="personnes" class="form-control" name="personnes" onblur="func_personnes()" required>
+                            <script>
+                                for(var i = 1; i <= 50; i++){
+                                    document.write('<option value="'+i+'" id="'+i+'_personnes">'+i+'</option>');
+                                }
+                            </script>
+                        </select>
+                        <br>
+                        <label class="form_class"></label>
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
+                    </form>
+                    </div>
+                </div>
+                <!-- **************** -->
+                <!-- 3eme TAB : Soins -->
+                <!-- **************** -->
+                <div id="tabs-3">
+                    <div class="row text-left p-2 form-group">
+                    <div class="p-2">
+                    <form method="get" id="formulaire">
+                        <label for="date_soin">Date du soin</label>
+                        <input type="text" class="form-control" id="date_soin">
+                        <br>
+                        <label for="typesoin">Type de Soins :</label>
+                        <select id="typesoin" class="form-control" name="typesoin" onblur="func_typesoin()" required>
+                            <option disabled selected value="">&nbsp;</option>
+                            <option value="1" id="detente">Détente</option>
+                            <option value="2" id="decouverte">Découverte</option>
+                            <option value="3" id="relaxant">Relaxant</option>
+                            <option value="4" id="plaisir">Plaisir</option>
+                            <option value="5" id="evasion">Evasion</option>
+                        </select>
+                        <br>
+                        <label for="adultes">Nombre d'adultes :</label>
+                        <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
+                            <option value="1" id="1_adulte">1</option>
+                            <option value="2" id="2_adulte">2</option>
+                            <option value="3" id="3_adulte">3</option>
+                            <option value="4" id="4_adulte">4</option>
+                        </select>
+                        <br>
+                        <label for="heuresoin">Heure :</label>
+                        <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
+                            <script>
+                                for(var i = 10; i <= 22; i++){
+                                    document.write('<option value="'+i+'" id="'+i+'_heuresoin">'+i+'H</option>');
+                                }
+                            </script>
+                        </select>
+                        <br>
+                        <label class="form_class"></label>
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
+                        
+                    </form>
+                    </div>
+                    </div>
+                </div>
             </div>
             </div>
-            <div class="row p-2">
-                <h3>Réserver une table</h3>
-            </div>
-            <div class="row text-left p-2 form-group">
-            <div class="p-2">
-            <form method="get" id="formulaire">
-                <label for="date_table">Date table</label>
-                <input type="text" class="form-control" id="date_table">
-                
-                <br><!--
-                <label for="midisoir">Heure de miammiam</label>
-                <select id="midisoir" class="form-control" name="midisoir" onblur="func_midisoir()" required>
-                    <option value="" id="0_midisoir">&nbsp;</option>
-                    <option value="1" id="midi">Midi</option>
-                    <option value="2" id="soir">Soir</option>
-                </select>
-                <br> -->
-                <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
-                <input type="radio" name="midisoir" value="s" id="soir" onclick="func_midisoir()" onblur="func_midisoir()"> Soir
-                
-                <br>
-                <span id="midi_h">
-                    <label for="midi_heure">Heure :</label>
-                    <select id="midi_heure" class="form-control" name="midi_heure" required>
-                    <option value="12h00" id="12h00">12h</option>
-                    <option value="12h30" id="12h30">12h30</option>
-                    <option value="13h00" id="13h00">13h00</option>
-                    <option value="13h30" id="13h30">13h30</option>
-                </select>
-                </span>
-                <span id="soir_h">
-                    <label for="soir_heure">Heure :</label>
-                    <select id="soir_heure" class="form-control" name="soir_heure" required>
-                    <option value="19h00" id="19h00">19h</option>
-                    <option value="19h30" id="19h30">19h30</option>
-                    <option value="20h00" id="20h00">20h00</option>
-                    <option value="20h30" id="20h30">20h30</option>
-                </select>
-                </span>
-                <script>
-                </script>
-                <br>
-                <label for="personnes">Nombre de personnes :</label>
-                <select id="personnes" class="form-control" name="personnes" onblur="func_personnes()" required>
-                    <script>
-                        for(var i = 1; i <= 50; i++){
-                            document.write('<option value="'+i+'" id="'+i+'_personnes">'+i+'</option>');
-                        }
-                    </script>
-                </select>
-                <br>
-                <label class="form_class"></label>
-                <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
-            </form>
-            </div>
-            </div>
-            <div class="row p-2">
-                <h3>Réserver un soin</h3>
-            </div>
-            <div class="row text-left p-2 form-group">
-            <div class="p-2">
-            <form method="get" id="formulaire">
-                <label for="date_soin">Date du soin</label>
-                <input type="text" class="form-control" id="date_soin">
-                
-                <br>
-                <label for="adultes">Nombre d'adultes :</label>
-                <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
-                    <option value="1" id="1_adulte">1</option>
-                    <option value="2" id="2_adulte">2</option>
-                    <option value="3" id="3_adulte">3</option>
-                    <option value="4" id="4_adulte">4</option>
-                </select>
-                <br>
-                <label for="heuresoin">Heure :</label>
-                <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
-                    <script>
-                        for(var i = 10; i <= 22; i++){
-                            document.write('<option value="'+i+'" id="'+i+'_heuresoin">'+i+'H</option>');
-                        }
-                    </script>
-                </select>
-                <br>
-                <label class="form_class"></label>
-                <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
-                
-            </form>
-            </div>
-            </div>
-               
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
@@ -287,9 +298,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
     <script>
         $( function() {
-    $( "#date_arv" ).datepicker();
-    $( "#date_dep" ).datepicker();
-  } );
+            $( "#date_arv" ).datepicker();
+            $( "#date_dep" ).datepicker();
+        } );
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
   </script>
     
     <script>
