@@ -116,8 +116,9 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             <div class="text-center">
             <h2>Réservation</h2>
             </div>
-            <div class="row text-left p-2 form-group">
-            <div id="tabs" class="">
+            <div class="row text-left p-2 form-group justify-content-around">
+            <div class="col-sm-4">
+            <div id="tabs">
                 <ul>
                     <li><a href="#tabs-1"><h2 class="tab">Chambre</h2></a></li>
                     <li><a href="#tabs-2"><h2 class="tab">Table</h2></a></li>
@@ -128,7 +129,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <!-- ******************* -->
                 <div id="tabs-1">
                     <div class="p-2 form-group">
-                    <form method="get" id="formulaire">
+                    <form method="get" id="formulaire-chambre">
                         <label for="date_arv">Date d'arrivée</label>
                         <input type="text" class="form-control" id="date_arv">
                         <br>
@@ -153,7 +154,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </select>
                         <br>
                         <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-chambre">
                     </form>
                     </div>
                 </div>
@@ -162,7 +163,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <!-- **************** -->
                 <div id="tabs-2">
                     <div class="p-2 form-group">
-                    <form method="get" id="formulaire">
+                    <form method="get" id="formulaire-table">
                         <label for="date_table">Date table</label>
                         <input type="text" class="form-control" id="date_table">
                         <br>
@@ -201,7 +202,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </select>
                         <br>
                         <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-table">
                     </form>
                     </div>
                 </div>
@@ -209,9 +210,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <!-- 3eme TAB : Soins -->
                 <!-- **************** -->
                 <div id="tabs-3">
-                    <div class="row text-left p-2 form-group">
-                    <div class="p-2">
-                    <form method="get" id="formulaire">
+                    <div class="p-2 form-group">
+                    <form method="get" id="formulaire-soin">
                         <label for="date_soin">Date du soin</label>
                         <input type="text" class="form-control" id="date_soin">
                         <br>
@@ -225,12 +225,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="5" id="evasion">Evasion</option>
                         </select>
                         <br>
-                        <label for="adultes">Nombre de personnes :</label>
-                        <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
-                            <option value="1" id="1_adulte">1</option>
-                            <option value="2" id="2_adulte">2</option>
-                            <option value="3" id="3_adulte">3</option>
-                            <option value="4" id="4_adulte">4</option>
+                        <label for="adultes-soin">Nombre d'adultes :</label>
+                        <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
+                            <option value="1" id="1_adulte-soin">1</option>
+                            <option value="2" id="2_adulte-soin">2</option>
+                            <option value="3" id="3_adulte-soin">3</option>
+                            <option value="4" id="4_adulte-soin">4</option>
                         </select>
                         <br>
                         <label for="heuresoin">Heure :</label>
@@ -243,19 +243,22 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </select>
                         <br>
                         <label class="form_class"></label>
-                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre_date">
-                        
+                        <input type="submit" value="Réserver" name="reservation_check" id="soumettre-soins">
                     </form>
                     </div>
-                    </div>
                 </div>
+                </div>    
+            </div>
+            <div class="col-sm-6 d-none d-lg-block">
+                    <img id="chambre-resa" class="img-fluid" src="img/chambres/classique/chambre-classique.jpg" alt="">
+                    <img id="table-resa" class="img-fluid" src="img/restaurant/dessert.jpg" alt="">
+                    <img id="soin-resa" class="img-fluid" src="img/spa/spa-accueil.jpg" alt="">
             </div>
             </div>
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
             <footer class="row footer justify-content-around">
-                
                 <div class="col-sm-5 p-4">
                     <p><a href="hotel-acces.htm">
                     <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
@@ -263,10 +266,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
                     <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter <br></a>
                     </p>
-                    
-                    
-                    
-                    
+
+  
                 </div>
                 <div class="col-sm-5 p-3">
                     
