@@ -65,6 +65,8 @@ a:hover{
   min-height: 65vh !important;
 }
 
+
+
 /* Caroussel */
 
 .text-accueil{
@@ -85,17 +87,22 @@ a:hover{
     height:288px;
 }
 
-
-/*
-{
-    text-shadow: 2px 0 0 #111, 2px 2px 0 #111, 0 2px 0 #111, -2px 2px 0 #111, -2px 0 0 #111, -2px -2px 0 #111, 0 -2px 0 #111, 2px -2px 0 #111;
-}*/
-
-.text-shadow, .boutons h2{
+.text-shadow{
     text-shadow: 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111, 0 0 2px #111;
     color:#eee;
 }
 
+.kkdoie{
+  background-color: rgba(148, 136, 30, 0.87)!important;
+  border-color: rgba(148, 136, 30, 0.87) !important;
+  color: white !important;
+}
+/*
+#tabs a:focus{
+  background-color: rgba(148, 136, 30, 0.87);
+  border-color: rgba(148, 136, 30, 0.87);
+  color: white;
+}*/
 
 .reserver-style{
   font-size: 20px;
