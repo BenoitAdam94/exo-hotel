@@ -116,7 +116,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             <div class="text-center">
             <h2>Réservation</h2>
             </div>
-            <div class="row text-left p-2 form-group justify-content-around">
+            <div class="row text-left p-2 form-group justify-content-around min-vh-65">
             <div class="col-sm-4">
             <div id="tabs">
                 <ul>
@@ -138,6 +138,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <label for="adultes">Nombre d'adultes :</label>
                         <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
+                            <option disabled value="">&nbsp;</option>
                             <option value="1" id="1_adulte">1</option>
                             <option value="2" id="2_adulte">2</option>
                             <option value="3" id="3_adulte">3</option>
@@ -146,6 +147,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <label for="enfant">Nombre d'enfants :</label>
                         <select id="enfant" class="form-control" name="enfant" onblur="func_enfant()" required>
+                            <option disabled value="">&nbsp;</option>
                             <option value="0" id="0_enfant">0</option>
                             <option value="1" id="1_enfant">1</option>
                             <option value="2" id="2_enfant">2</option>
@@ -174,6 +176,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <span id="midi_h">
                             <label for="midi_heure">Heure :</label>
                             <select id="midi_heure" class="form-control" name="midi_heure" required>
+                            <option disabled selected value="">&nbsp;</option>
                             <option value="12h00" id="12h00">12h</option>
                             <option value="12h30" id="12h30">12h30</option>
                             <option value="13h00" id="13h00">13h00</option>
@@ -183,6 +186,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <span id="soir_h">
                             <label for="soir_heure">Heure :</label>
                             <select id="soir_heure" class="form-control" name="soir_heure" required>
+                            <option disabled selected value="">&nbsp;</option>
                             <option value="19h00" id="19h00">19h</option>
                             <option value="19h30" id="19h30">19h30</option>
                             <option value="20h00" id="20h00">20h00</option>
@@ -194,6 +198,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <label for="personnes">Nombre de personnes :</label>
                         <select id="personnes" class="form-control" name="personnes" onblur="func_personnes()" required>
+                            <option disabled selected value="">&nbsp;</option>
                             <script>
                                 for(var i = 1; i <= 50; i++){
                                     document.write('<option value="'+i+'" id="'+i+'_personnes">'+i+'</option>');
@@ -227,6 +232,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <label for="adultes-soin">Nombre d'adultes :</label>
                         <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
+                            <option disabled selected value="">&nbsp;</option>
                             <option value="1" id="1_adulte-soin">1</option>
                             <option value="2" id="2_adulte-soin">2</option>
                             <option value="3" id="3_adulte-soin">3</option>
@@ -235,6 +241,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <label for="heuresoin">Heure :</label>
                         <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
+                            <option disabled selected value="">&nbsp;</option>
                             <script>
                                 for(var i = 10; i <= 22; i++){
                                     document.write('<option value="'+i+'" id="'+i+'_heuresoin">'+i+'H</option>');
