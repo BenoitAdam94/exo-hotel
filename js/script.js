@@ -20,19 +20,19 @@ $('a[href^="#"]').click(function(){
 
 function searchbargrow(mediax) {
 	var u = document.getElementById('search_field');
-	console.log(u);
+	// console.log(u);
 	if (mediax.matches) {
 	  	u.style.width="100%";
 	  	u.style.border="1px solid grey";
-	  	console.log('if');
+	  	// console.log('if');
 	} else {
 		u.style.width="";
 	  	u.style.border="1px solid transparent";
-	  	console.log('else');
+	  	// console.log('else');
 	}
   }
 
-  console.info('info');
+  // console.info('info');
   var mediax = window.matchMedia("(max-width: 992px)");
   searchbargrow(mediax);
   mediax.addListener(searchbargrow);
@@ -81,6 +81,30 @@ function func_midisoir() {
     $('#soir_h').show();
   }
 }
+
+/* Image reservation */
+
+$('#chambre-resa').hide();
+$('#table-resa').hide();
+$('#soin-resa').hide();
+
+$('#chambre-tab').click(function() {
+  $('#chambre-resa').show();
+  $('#table-resa').hide();
+  $('#soin-resa').hide();
+});
+
+$('table-tab').click(function() {
+  $('#chambre-resa').hide();
+  $('#table-resa').show();
+  $('#soin-resa').hide();
+});
+
+$('#soin-tab').click(function() {
+  $('#chambre-resa').hide();
+  $('#table-resa').hide();
+  $('#soin-resa').show();
+});
 
 /* ****** Formulaire de contact ****** */
 
