@@ -141,11 +141,11 @@ a:hover{
   border: none;
   background-color: rgba(148, 136, 30, 0.87);
   color: white;
-  width: 40%;
   text-align: center;
 }
 
 .reserver-position{
+  width: 40%;
       position: absolute;
       right: 0;
 }
