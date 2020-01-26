@@ -130,10 +130,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-chambre">
                         <label for="date_arv">Date d'arrivée</label>
-                        <input type="text" class="form-control" id="date_arv">
+                        <input type="text" class="form-control" id="date_arv" onblur="func_dateJour()" required>
                         <br>
                         <label for="date_dep">Date de départ</label>
-                        <input type="text" class="form-control" id="date_dep">
+                        <input type="text" class="form-control" id="date_dep" onblur="func_verifDate()" required>
                         <br>
                         <label for="adultes">Nombre d'adultes</label>
                         <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
@@ -165,7 +165,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-table">
                         <label for="date_table">Date</label>
-                        <input type="text" class="form-control" id="date_table">
+                        <input type="text" class="form-control" onblur="func_dateJour()" id="date_table" required>
                         <br>
                         <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
                         <input type="radio" name="midisoir" value="s" id="soir" onclick="func_midisoir()" onblur="func_midisoir()"> Soir
@@ -173,23 +173,25 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <span id="midi_h">
                             <label for="midi_heure">Heure</label>
-                            <select id="midi_heure" class="form-control" name="midi_heure" required>
+                            <select id="midi_heure" class="form-control" onblur="func_heuretablemidi()"  name="midi_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="12h00" id="12h00">12h</option>
                             <option value="12h30" id="12h30">12h30</option>
                             <option value="13h00" id="13h00">13h00</option>
                             <option value="13h30" id="13h30">13h30</option>
                         </select>
+                        <strong id="heuretablemidi_verif"></strong>
                         </span>
                         <span id="soir_h">
                             <label for="soir_heure">Heure</label>
-                            <select id="soir_heure" class="form-control" name="soir_heure" required>
+                            <select id="soir_heure" class="form-control" onblur="func_heuretablesoir()"  name="soir_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="19h00" id="19h00">19h</option>
                             <option value="19h30" id="19h30">19h30</option>
                             <option value="20h00" id="20h00">20h00</option>
                             <option value="20h30" id="20h30">20h30</option>
                         </select>
+                        <strong id="heuretablesoir_verif"></strong>
                         </span>
                         <script>
                         </script>
@@ -203,6 +205,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 }
                             </script>
                         </select>
+                        <strong id="personnes_verif"></strong>
                         <br>
                         <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-table">Réserver une table</button>
                     </form>
@@ -215,7 +218,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-soin">
                         <label for="date_soin">Date</label>
-                        <input type="text" class="form-control" id="date_soin">
+                        <input type="text" class="form-control" onblur="func_dateJour()" id="date_soin" required>
                         <br>
                         <label for="heuresoin">Heure</label>
                         <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
@@ -226,6 +229,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 }
                             </script>
                         </select>
+                        <strong id="heuresoin_verif"></strong>
                         <br>
                         <label for="typesoin">Type de Soins</label>
                         <select id="typesoin" class="form-control" name="typesoin" onblur="func_typesoin()" required>
@@ -236,15 +240,16 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="4" id="plaisir">Plaisir</option>
                             <option value="5" id="evasion">Evasion</option>
                         </select>
+                        <strong id="typesoin_verif"></strong>
                         <br>
-                        <label for="adultes-soin">Nombre d'adultes</label>
+      <!--<label for="adultes-soin">Nombre d'adultes</label>
                         <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="1" id="1_adulte-soin">1</option>
                             <option value="2" id="2_adulte-soin">2</option>
                             <option value="3" id="3_adulte-soin">3</option>
                             <option value="4" id="4_adulte-soin">4</option>
-                        </select>
+                        </select> -->
                         <br>
                         <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-soins">Réserver un soin</button>
                     </form>

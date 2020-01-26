@@ -235,7 +235,7 @@ var zonedetexte2f = false
 function func_thematique() {
   if (thematique.value == 0)
   {
-    thematique_verif.innerHTML = 'Sélectionnez une thématique';
+    thematique_verif.innerHTML = 'Sélectionnez votre thématique';
     redborder(thematique);
     thematiquef = false;
   }else{
@@ -256,6 +256,126 @@ function func_zonedetexte2() {
     zonedetexte2_verif.innerHTML = '';
     greenborder(zonedetexte2);
     zonedetexte2f = true;
+  }
+}
+
+/* ********** formulaire réservation chambre ***** */
+
+var dateArrivee = 'date_arv';
+var dateJour = new Date();
+
+function func_dateJour(){
+  if(dateArrivee < dateJour){
+       alert('La date choisie ne peut pas être antérieure à la date actuelle');
+}
+
+function func_verifDate(){
+  var a=new Date('date_arv');			// date d'arrivée
+  var b=new Date('date_dep'); // date de départ
+  if(a > b){ 
+    alert("false");
+  }
+  else{
+    alert("La date de départ doit être ultérieure à la date d'arrivée");
+  }
+ }
+
+/* ************ Formulaire réservation Table ******** */
+
+var heuretablemidif = false
+var heuretablesoirf = false
+var personnesf = false
+var dateArrivee2 = 'date_table';
+
+
+function func_dateJour(){
+  if(dateArrivee2 < dateJour){
+    alert("false");
+  }
+  else{
+    alert('La date choisie ne peut pas être antérieure à la date actuelle');
+  }
+}
+
+function func_heuretablemidi() {
+  if (midi_heure.value == 0)
+  {
+    heuretablemidi_verif.innerHTML = 'Sélectionnez un horaire';
+    redborder(midi_heure);
+    heuretablemidif = false;
+  }else{
+    heuretablemidi_verif.innerHTML = '';
+    greenborder(midi_heure);
+    heuretablemidif = true;
+  }
+}
+
+function func_heuretablesoir() {
+  if (soir_heure.value == 0)
+  {
+    heuretablesoir_verif.innerHTML = 'Sélectionnez un horaire';
+    redborder(soir_heure);
+    heuretablesoirf = false;
+  }else{
+    heuretablesoir_verif.innerHTML = '';
+    greenborder(soir_heure);
+    heuretablesoirf = true;
+  }
+}
+
+function func_personnes() {
+  if (personnes.value < 1)
+  {
+    personnes_verif.innerHTML = 'Sélectionnez un nombre de personne(s)';
+    redborder(personnes);
+    personnesf = false;
+  }else{
+    personnes_verif.innerHTML = '';
+    greenborder(personnes);
+    personnesf = true;
+  }
+}
+
+
+/* ************ Formulaire réservation Spa ******** */
+
+var typesoinf = false
+var heuresoinf = false
+var dateArrivee3 = 'date_soin';
+
+
+function func_dateJour(){
+  if(dateArrivee3 < dateJour){
+    alert("false");
+  }
+  else{
+    alert('La date choisie ne peut pas être antérieure à la date actuelle');
+  }
+}
+
+function func_typesoin() {
+  if (typesoin.value == 0)
+  {
+    typesoin_verif.innerHTML = 'Sélectionnez un soin';
+    redborder(typesoin);
+    typesoinf = false;
+  }else{
+    typesoin_verif.innerHTML = '';
+    greenborder(typesoin);
+    typesoinf = true;
+  }
+}
+
+function func_heuresoin() {
+  if (heuresoin.value == 0)
+  {
+    heuresoin_verif.innerHTML = 'Sélectionnez un horaire';
+    redborder(heuresoin);
+    heuresoinf = false;
+  }else{
+    heuresoin_verif.innerHTML = '';
+    greenborder(heuresoin);
+    heuresoinf = true;
   }
 }
 
