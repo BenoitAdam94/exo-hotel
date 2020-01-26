@@ -187,18 +187,20 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </div>
                     <div class="form-group">
                         <label for="thematique"></label>
-                        <select name="thematique" class="form-control">
-                            <option disabled selected>Sélectionnez votre thématique</option>
+                        <select id=thematique name="thematique" class="form-control" onblur="func_thematique()" required> >
+                            <option disabled selected value="">Sélectionnez votre thématique *</option>
                                 <option value="fr">Hôtel</option>
                                 <option value="es">Chambres</option>
                                 <option value="it">Restaurant</option>
                                 <option value="la">Spa</option>
                         </select>
+                        <strong id="thematique_verif"></strong>
                         <hr>
                     </div>
                     <div class="form-group">
-                        <label for="commentaire"></label>
-                        <textarea id="commentaire" class="form-control" name="commentaire" rows="10" cols="90" placeholder="Votre commentaire"></textarea>
+                        <label for="zonedetexte2"></label>
+                        <textarea id="zonedetexte2" class="form-control" name="zonedetexte2" rows="10" cols="90" placeholder="Votre commentaire *" onblur="func_zonedetexte2()" required></textarea>
+                        <strong id="zonedetexte2_verif"></strong>
                         <hr>
                     </div>
                     <div class="form-group">

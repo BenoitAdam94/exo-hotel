@@ -200,7 +200,7 @@ function func_zonedetexte() {
 function func_service() {
   if (service.value == 0)
   {
-    service_verif.innerHTML = 'Selectionnez un service';
+    service_verif.innerHTML = 'Sélectionnez le service';
     redborder(service);
     servicef = false;
   }else{
@@ -225,5 +225,38 @@ function inscription() {
   }
 }
 
+
+/* ******* fonctions formulaire avis ******/
+
+var thematiquef = false
+var zonedetexte2f = false
+
+
+function func_thematique() {
+  if (thematique.value == 0)
+  {
+    thematique_verif.innerHTML = 'Sélectionnez une thématique';
+    redborder(thematique);
+    thematiquef = false;
+  }else{
+    thematique_verif.innerHTML = '';
+    greenborder(thematique);
+    thematiquef = true;
+  }
+}
+
+
+
+function func_zonedetexte2() {
+  if (zonedetexte2.value.length < 20) {
+    zonedetexte2_verif.innerHTML = 'Minimum 20 caractères';
+    redborder(zonedetexte2);
+    zonedetexte2f = false;
+  }else{
+    zonedetexte2_verif.innerHTML = '';
+    greenborder(zonedetexte2);
+    zonedetexte2f = true;
+  }
+}
 
 // soumettre.addEventListener("click", inscription);
