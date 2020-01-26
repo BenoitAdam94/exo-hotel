@@ -54,7 +54,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <!-- LOGO / H1 -->
                 <div class="col text-center">
                     <a href="index.htm">
-                    <h1><img class="mx-auto d-block" style="max-width: 254px;" src="img/logo/logo_icone9.jpg"></h1>
+                    <h1><img class="mx-auto d-block" style="max-width: 254px;" src="img/logo/logo_icone9.jpg" alt="logo"></h1>
                     </a>
                 </div>
                 <div class="col-sm-4 text-right d-none d-lg-block">
@@ -138,7 +138,9 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 <input type="text" class="form-control" id="date_dep">
                             </form>
                         </td>
-                        <td class="p-2"><i class="fas fa-trash-alt"></i></td>
+                        <td class="p-2">
+                            <i class="fas fa-trash-alt"></i>
+                        </td>
                         <td>
                             <script>
                                 var prixchluxe = 1199;
@@ -149,18 +151,22 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                       <tr>
                         <td colspan="5"></td>
                         <td colspan="2">Taxe de séjour</td>
-                        <td><script>
+                        <td>
+                            <script>
                             const taxesejour = 4;
                             document.write(taxesejour+'€')
-                        </script></td>
+                        </script>
+                        </td>
                       </tr>
                       <tr>
                         <td colspan="5"></td>
                         <td colspan="2">Total</td>
-                        <td><script>
+                        <td>
+                            <script>
                             var total = prixchluxe + taxesejour;
                             document.write(total+'€')
-                        </script></td>
+                            </script>
+                        </td>
                       </tr>
                     </table>
 
