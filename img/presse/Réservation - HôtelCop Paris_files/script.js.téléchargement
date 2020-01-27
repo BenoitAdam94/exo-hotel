@@ -345,11 +345,11 @@ function func_personnes() {
 
 var typesoinf = false
 var heuresoinf = false
-var dateSoin = new Date('date_soin');
+var dateArrivee3 = 'date_soin';
 
 
 function func_dateJour(){
-  if(dateSoin < dateJour){
+  if(dateArrivee3 > dateJour){
     alert("false");
   }
   else{

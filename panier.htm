@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <!-- Title-->
-        <title>Présentation - HôtelCop Paris</title>
+        <title>Panier - HôtelCop Paris</title>
         <!-- Charset in HTML5 -->
         <meta charset="UTF-8">
         <!-- Meta Description -->
@@ -31,7 +31,7 @@
         <meta property="og:description" content="L'hôtelCop, nouvelle adresse chic de l'ouest parisien, est niché dans le cœur du 8ème arrondissement, à deux pas des champs Elysées et de la Tour Eiffel. On y retrouve 18 chambres mais aussi un restaurant étoilé et un spa de luxe.">
         <meta property="og:url" content="http://www.hotelcop.fr">
         <meta property="og:type" content="article">
-        <meta property="og:image" content="img/logo/new-logo-bis.jpg">
+        <meta property="og:image" content="img/logo/img/logo/logo_icone9.jpg">
         <meta property="og:locale" content="FR_fr">
         <!-- Twitter cards -->
         <!-- Javascript *fin de page* -->
@@ -49,14 +49,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     </head>
     <body>
         <div class="container">
-            <div class="row menu">
-                <div class="col-sm-4 d-none d-lg-flex">   
-                </div>
-                    
+            <header class="row menu">
+                <div class="col-sm-4 d-none d-lg-flex"></div>
+                <!-- LOGO / H1 -->
                 <div class="col text-center">
                     <a href="index.htm">
-                    <img class="mx-auto d-block" style="max-width: 254px;" src="img/logo/logo_icone9.jpg" alt="logo hotelcop">
-                   
+                    <h1><img class="mx-auto d-block" style="max-width: 254px;" src="img/logo/logo_icone9.jpg" alt="logo"></h1>
                     </a>
                 </div>
                 <div class="col-sm-4 text-right d-none d-lg-block">
@@ -66,25 +64,22 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="reserver-style reserver-position mr-5">Réserver</div>
                     </a>
                 </div>
-            </div>
+            </header>
             <div class="row menunav">
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light row p-2">
                         <div class="col d-flex justify-content-center align-items-center d-lg-none m-0 mt p-0 ">
-                            <div class="text-light">Reserver</div>
+                            <a href="reservation.htm">
+                            <div class="reserver-style w-80">Réserver</div>
+                            </a>
                         </div>
                         <div class="col d-flex justify-content-around align-items-center d-lg-none m-0 p-0">
                             <div><img src="img/flags/fr.jpg" alt="site en français"></div>
                             <div><img src="img/flags/en.jpg" alt="site in english"></div>
                         </div>
-                        
                         <div class="col d-lg-none m-0 p-0 text-center">
-                        
                         <a class="navbar-brand" href="#"></a>
                         
-                        
-
-
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -98,9 +93,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <a class="nav-item nav-link" href="hotel-evenements.htm">Evènements</a>
                             <a class="nav-item nav-link" href="hotel-presse.htm">Presse</a>
                             <a class="nav-item nav-link" href="avis.htm">Avis</a>
+                            
                         </div>
+                        <!-- ********** -->
+                        <!-- SEARCH BAR -->
+                        <!-- ********** -->
                         <div>
-                        
                             <div class="search__wrapper">
                                 <form method="get" action="recherche.htm">
                                 <input type="text" placeholder="Search for..." class="search__field" id="search_field">
@@ -108,36 +106,71 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 <button type="submit" class="fa fa-search search__icon">
                                 </button>
                             </div>
-
-                        
                         </div>
                         </div>
                     </nav>
                 </div>
+            </div>
+            <div>
+                <h2 class="text-center">Panier</h2>
                 
             </div>
-            <div class="row restaurant p-2">
-                <div class="col-sm-8 p-2">  
+            <div class="row text-center justify-content-center align-items-center">
+                <table class="d-flex  p-2 m-2  w-80 text-center justify-content-center align-items-center">
+                    <tr>
+                      <th colspan="4">Article</th>
+                      <th>Date d'arrivée</th>
+                      <th>Date de départ</th>
+                      <th></th>
+                      <th>TOTAL TTC</th>
+                    </tr>
+                    <tr>
+                        <td class="p-2" colspan="4">Chambre Deluxe</td>
+                        <td class="p-2">
+                            <form method="get" id="formulaire-chambre">
+                                <label for="date_arv">Date d'arrivée</label>
+                                <input type="text" class="form-control" id="date_arv">
+                            </form>
+                        </td>
+                        <td class="p-2">
+                            <form>
+                                <label for="date_dep">Date de départ</label>
+                                <input type="text" class="form-control" id="date_dep">
+                            </form>
+                        </td>
+                        <td class="p-2">
+                            <i class="fas fa-trash-alt"></i>
+                        </td>
+                        <td>
+                            <script>
+                                var prixchluxe = 1199;
+                                document.write(prixchluxe+'€')
+                            </script>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="5"></td>
+                        <td colspan="2">Taxe de séjour</td>
+                        <td>
+                            <script>
+                            const taxesejour = 4;
+                            document.write(taxesejour+'€')
+                        </script>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="5"></td>
+                        <td colspan="2">Total</td>
+                        <td>
+                            <script>
+                            var total = prixchluxe + taxesejour;
+                            document.write(total+'€')
+                            </script>
+                        </td>
+                      </tr>
+                    </table>
 
-                    <h2>Une histoire riche</h2>
-                    <p>
-                    C’est Paris, c’est l’Avenue Montaigne, c’est Dior et Marlène Dietrich. C’est ici que, depuis 1854, <em>HôtelCop</em> est le témoin privilégié de la naissance des icônes et de l'évolution des tendances. Vous aussi, entrez dans l’histoire d’un palace à l’héritage singulier et écrivez-en avec nous les prochains chapitres.
-                    </p>
-
-                    <p>
-                    Séjourner à l'<em>HôtelCop</em> c'est dormir dans un hôtel au chic "parisien" : cheminées, moulures, parquets pointe de Hongrie, mosaïques de marbre... Mais c'est aussi vivre le Paris des faubourgs.<br>Une adresse où les parisiens s'installent en terrasse comme dans une carte postale : rue pavée, réverbères, petits bancs et jardinières fleuries...</p>
-                    <ul>
-                        <li> 18 chambres dont 7 avec balcons réparties en 4 catégories (<em>Classique, Confort, Deluxe et Suite</em>)</li>
-                        <li> 4 univers différents faits de velours d'éditeur, de mobilier chiné, de comptoir ...</li>
-                        <li> Un restaurant étoilé proposant des plats gastronomiques</li>
-                        <li> Un spa proposant des soins et des produits de beauté de luxe</li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 p-2 text-center "> 
-                    <img src="img/hotel/paris-ifocop-hotel-histoire.jpg" alt="hotelcop 1930 noir et blanc">
-                </div>
             </div>
-               
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
@@ -186,6 +219,17 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a9c7eed9d3.js" crossorigin="anonymous"></script>
+    <script>
+        $( function() {
+            $( "#date_arv" ).datepicker();
+            $( "#date_dep" ).datepicker();
+            $( "#date_table" ).datepicker();
+            $( "#date_soin" ).datepicker();
+        } );
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
     
     <script>
 

@@ -109,11 +109,14 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </nav>
                 </div>
             </div>
-            <div class="row p-2">
-            <h2>Réservation</h2>
+            <div class="p-2">
+                <h2 class="text-center">Réservation</h2>
             </div>
             <div class="row text-left p-2 form-group justify-content-around min-vh-65">
-            <div class="col-lg-4">
+            <div class="col-lg-4 p-1">
+                <a href="panier.htm">
+                <h3><i class="fas fa-shopping-cart"></i> Voir votre panier</h3><br>
+                </a>
             <div id="tabs">
                 <ul>
                     <li><a href="#tabs-1" onclick="func_chambre_img()"><h2 class="tab">Chambre</h2></a></li>
@@ -127,10 +130,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-chambre">
                         <label for="date_arv">Date d'arrivée</label>
-                        <input type="text" class="form-control" id="date_arv">
+                        <input type="text" class="form-control" id="date_arv" onblur="func_dateJour()" required>
                         <br>
                         <label for="date_dep">Date de départ</label>
-                        <input type="text" class="form-control" id="date_dep">
+                        <input type="text" class="form-control" id="date_dep" onblur="func_verifDate()" required>
                         <br>
                         <label for="adultes">Nombre d'adultes</label>
                         <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>
@@ -162,7 +165,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-table">
                         <label for="date_table">Date</label>
-                        <input type="text" class="form-control" id="date_table">
+                        <input type="text" class="form-control" onblur="func_dateJour()" id="date_table" required>
                         <br>
                         <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
                         <input type="radio" name="midisoir" value="s" id="soir" onclick="func_midisoir()" onblur="func_midisoir()"> Soir
@@ -170,23 +173,25 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <br>
                         <span id="midi_h">
                             <label for="midi_heure">Heure</label>
-                            <select id="midi_heure" class="form-control" name="midi_heure" required>
+                            <select id="midi_heure" class="form-control" onblur="func_heuretablemidi()"  name="midi_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="12h00" id="12h00">12h</option>
                             <option value="12h30" id="12h30">12h30</option>
                             <option value="13h00" id="13h00">13h00</option>
                             <option value="13h30" id="13h30">13h30</option>
                         </select>
+                        <strong id="heuretablemidi_verif"></strong>
                         </span>
                         <span id="soir_h">
                             <label for="soir_heure">Heure</label>
-                            <select id="soir_heure" class="form-control" name="soir_heure" required>
+                            <select id="soir_heure" class="form-control" onblur="func_heuretablesoir()"  name="soir_heure" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="19h00" id="19h00">19h</option>
                             <option value="19h30" id="19h30">19h30</option>
                             <option value="20h00" id="20h00">20h00</option>
                             <option value="20h30" id="20h30">20h30</option>
                         </select>
+                        <strong id="heuretablesoir_verif"></strong>
                         </span>
                         <script>
                         </script>
@@ -200,6 +205,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 }
                             </script>
                         </select>
+                        <strong id="personnes_verif"></strong>
                         <br>
                         <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-table">Réserver une table</button>
                     </form>
@@ -212,7 +218,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-soin">
                         <label for="date_soin">Date</label>
-                        <input type="text" class="form-control" id="date_soin">
+                        <input type="text" class="form-control" onblur="func_dateJour()" id="date_soin" required>
                         <br>
                         <label for="heuresoin">Heure</label>
                         <select id="heuresoin" class="form-control" name="heuresoin" onblur="func_heuresoin()" required>
@@ -223,6 +229,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                                 }
                             </script>
                         </select>
+                        <strong id="heuresoin_verif"></strong>
                         <br>
                         <label for="typesoin">Type de Soins</label>
                         <select id="typesoin" class="form-control" name="typesoin" onblur="func_typesoin()" required>
@@ -233,15 +240,16 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="4" id="plaisir">Plaisir</option>
                             <option value="5" id="evasion">Evasion</option>
                         </select>
+                        <strong id="typesoin_verif"></strong>
                         <br>
-                        <label for="adultes-soin">Nombre d'adultes</label>
+      <!--<label for="adultes-soin">Nombre d'adultes</label>
                         <select id="adultes-soin" class="form-control" name="adultes-soin" onblur="func_adultes()" required>
                             <option disabled selected value="">&nbsp;</option>
                             <option value="1" id="1_adulte-soin">1</option>
                             <option value="2" id="2_adulte-soin">2</option>
                             <option value="3" id="3_adulte-soin">3</option>
                             <option value="4" id="4_adulte-soin">4</option>
-                        </select>
+                        </select> -->
                         <br>
                         <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-soins">Réserver un soin</button>
                     </form>
@@ -251,40 +259,45 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             </div>
             <div class="col-sm-6 d-none d-lg-block text-center">
                     <img id="chambre-resa" class="img-fluid" src="img/chambres/classique/chambre-classique.jpg" alt="chambre classique HôtelCop">
-                    <img id="table-resa" class="img-fluid" src="img\restaurant\image-resa-table.jpg" alt="Plat restaurant HôtelCop">
-                    <img id="soin-resa" class="img-fluid" src="img\spa\spa-page.jpg" alt="">
+                    <img id="table-resa" class="img-fluid" src="img/restaurant/image-resa-table.jpg" alt="Plat restaurant HôtelCop">
+                    <img id="soin-resa" class="img-fluid" src="img/spa/spa-page.jpg" alt="spa">
             </div>
             </div>
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
             <footer class="row footer justify-content-around">
-                <div class="col-sm-5 p-4">
+                
+                <div class="col-sm-5 p-2 pl-5">
                     <p><a href="hotel-acces.htm">
                     <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
                     <i class="fas fa-location-arrow"></i> Plan et accès<br></a>
                     <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
-                    <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter <br></a>
-                    </p>
-
-  
+                    <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter</a><br>
+                    <a href="javascript:window.print()"><i class="fas fa-print"></i> Imprimer</a></p>
                 </div>
-                <div class="col-sm-5 p-3">
-                    
+                <div class="col-sm-5">
+                    <div class="row">
+                    <div class="col-sm-8 p-2">
                     <ul>
+                        <li><a href="plan-du-site.htm">Plan du site</a></li>
                         <li><a href="mentions-legales.htm">Mentions légales</a></li>
                         <li><a href="CGV.htm">Conditions Générales de vente</a></li>
                         <li><a href="actualites.htm">Les dernières news du secteur de l'hôtellerie</a></li>
-                        <li><a href="hotel-recrutement.htm">Recrutement</a></li>                       
+                        <li><a href="hotel-recrutement.htm">Recrutement</a></li>
                     </ul>
-
-                    <p class="text-right">
+                    </div>
+                    <div class="col-sm-4 m-0 p-0 text-center">
+                    
+                    
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x btn-dark btn-lg"></i></a>
-                    <a href="javascript:window.print()"><i class="fas fa-print fa-2x btn-dark btn-lg"></i></a>
-                    </p>
-
+                
+                    
+                    
+                    </div>
+                    </div>
                     
                     
                     

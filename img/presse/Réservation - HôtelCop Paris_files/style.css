@@ -11,10 +11,6 @@ ffdiv{
     border:2px solid #333;
 }
 
-/* table {
-  border: 1px solid red;
-} */
-
 h1{
     font-size: 15px;
     color: rgb(110, 107, 107);
@@ -46,7 +42,9 @@ table {
   min-width: 400px;
 }
 
-
+table {
+  border: 1px solid red;
+}
 
 th, td {
   border: 1px solid black;
