@@ -261,10 +261,22 @@ function func_zonedetexte2() {
 
 /* ********** formulaire réservation chambre ***** */
 
-var dateArrivee = 'date_arv';
+var dateArrivee = date_arv.value;
 var dateJour = new Date();
 
+var date    = new Date(),
+    yr      = date.getFullYear(),
+    month   = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth(),
+    day     = date.getDate()  < 10 ? '0' + date.getDate()  : date.getDate(),
+    newDate = day + '/' + month + '/' + yr;
+console.log(newDate);
+
+
+console.log(dateJour);
+
+
 function func_dateJour(){
+  
   if(dateArrivee < dateJour){
     alert("false");
   }
@@ -282,6 +294,10 @@ function func_verifDate(){
   else{
     alert("La date de départ doit être ultérieure à la date d'arrivée");
   }
+ }
+
+ function func_log_resa(){
+   console.info(dateArrivee);
  }
 
 /* ************ Formulaire réservation Table ******** */
