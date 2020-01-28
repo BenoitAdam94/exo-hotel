@@ -210,12 +210,8 @@ function func_service() {
   }
 }
 
-function log() {
-  console.log(civf, nomf, prenomf, emailf, servicef, zonedetextef);
-}
-
 function inscription() {
-  log();
+  console.log(civf, nomf, prenomf, emailf, servicef, zonedetextef);
   if (civf && nomf && prenomf && emailf && servicef && zonedetextef) {
     alert('Le message a bien été envoyé');
     event.preventDefault();
@@ -225,6 +221,22 @@ function inscription() {
   }
 }
 
+// var soumettre = document.getElementById('soumettre');
+soumettre.addEventListener("click", inscription);
+
+function envoyer_cv() {
+  console.log(nomf, prenomf, emailf, zonedetextef);
+  if (nomf && prenomf && emailf && zonedetextef) {
+    alert('Le CV a bien été envoyé');
+    event.preventDefault();
+  }else{
+    alert('Le formulaire est incomplet');
+    event.preventDefault();
+  }
+}
+
+// var envoyercv = document.getElementById('envoyercv');
+envoyercv.addEventListener("click", envoyer_cv);
 
 /* ******* fonctions formulaire avis ******/
 
@@ -288,7 +300,7 @@ var date_ajd = yyyymmdd();
 date_ajd = parseInt(date_ajd);
 // console.info('date_adj'+date_ajd+typeof(date_ajd));
 
-
+//var date_arv = document.getElementById('date_arv');
 var dateArrivee = date_arv.value;
 var dateArrivee = convertion_date_jquery(dateArrivee);
 // console.info('date_arv'+dateArrivee+typeof(dateArrivee));
@@ -304,6 +316,7 @@ function func_dateJour(){
     alert('La date choisie ne peut pas être antérieure à la date actuelle');
   }
 }
+
 
 function func_verifDate(){
   var a=new Date('date_arv');			// date d'arrivée
@@ -419,4 +432,3 @@ function func_heuresoin() {
   }
 }
 
-// soumettre.addEventListener("click", inscription);

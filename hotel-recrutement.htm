@@ -184,7 +184,61 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center p-3">
+                <form method="get" id="formulaire">
+                    <fieldset>
+                    <legend class="text-center">Candidature spontannée</legend>
+                    
+                    <!-- Nom (Bootstrap -->
+                    <div class="form-group">
+                        <label for="nom">Votre Nom*</label>
+                        <input id="nom" type="text" class="form-control" onblur="func_nom()" required>
+                        <strong id="nom_verif"></strong>
+                    </div>
+                    <!-- Prenom Bootstrap -->
+                    <div class="form-group">
+                        <label for="prenom">Votre Prénom*</label>
+                        <input id="prenom" type="text" class="form-control" onblur="func_prenom()" required>
+                        <strong id="prenom_verif"></strong>
+                    </div>
+                    <!-- Email BootStrap-->
+                    <div class="form-group">
+                        <label for="email">Votre Adresse E-mail*</label>
+                        <input type="email" class="form-control" id="email" onblur="func_email()" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas votre e-mail.</small>
+                        <strong id="email_verif"></strong>
+                    </div>
+                    <!-- CV PJ-->
+                    <div class="form-group">
+                        <label for="lm">Lettre de motivation</label>
+                        <input type="file" class="form-control-file" id="lm">
+                        <strong id="service_verif"></strong>
+                    </div>
+                    <!-- Zone de texte (Bootstrap) -->
+                    <div class="form-group">
+                        <label for="zonedetexte">Votre Message*</label>
+                        <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
+                        <strong id="zonedetexte_verif"></strong>
+                    </div>
 
+                    <!-- Newsletter (Bootstrap) -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter">
+                        <label class="form-check-label" for="newsletter">
+                            Je désire recevoir la newsletter chaque mois
+                        </label>
+                    </div>
+
+                    <!-- Formcheck (Bootstrap) -->
+                    <div class="form-group p-2">
+                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="envoyercv">
+                    </div>
+                    <br>
+      
+                    <br>
+                </fieldset>
+                  </form>
+            </div>
                 
                
             <!-- ****** -->
