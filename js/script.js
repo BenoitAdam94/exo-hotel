@@ -261,18 +261,38 @@ function func_zonedetexte2() {
 
 /* ********** formulaire réservation chambre ***** */
 
+function yyyymmdd() {
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    var yyyymmdd = y + m + d;
+    return yyyymmdd;
+}
+
+// var date = '01/21/2020'; // date example
+
+function convertion_date_jquery(date) {
+    var day = date.slice(3,5);
+    var month = date.slice(0,2);
+    var year = date.slice(6,10);
+    var cdj = year + month + day;
+    var cdj = parseInt(cdj);
+    console.log(cdj+typeof(cdj));
+    return cdj
+}
+
+var date_ajd = yyyymmdd();
+date_ajd = parseInt(date_ajd);
+// console.info('date_adj'+date_ajd+typeof(date_ajd));
+
+
 var dateArrivee = date_arv.value;
-var dateJour = new Date();
+var dateArrivee = convertion_date_jquery(dateArrivee);
+// console.info('date_arv'+dateArrivee+typeof(dateArrivee));
 
-var date    = new Date(),
-    yr      = date.getFullYear(),
-    month   = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth(),
-    day     = date.getDate()  < 10 ? '0' + date.getDate()  : date.getDate(),
-    newDate = day + '/' + month + '/' + yr;
-console.log(newDate);
-
-
-console.log(dateJour);
 
 
 function func_dateJour(){
