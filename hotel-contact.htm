@@ -119,7 +119,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 
             </div>
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mt-2">
                     <h2>Nous Contacter</h2>
                 </div>
             </div>
@@ -140,17 +140,17 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                           Femme
                         </label>
                     </div> -->
-                    <!-- Bouton Radio -->
+                    <!-- Bouton Radio 
                     <div class="form-group" id="civ">
                       <label class="text-left">Sexe : </label>
                       <input type="radio" name="civilite" value="h" id="homme" onblur="func_civilite()"> Homme &nbsp;
                       <input type="radio" name="civilite" value="f" id="femme" onblur="func_civilite()"> Femme
                       <strong id="civilite_verif"></strong>
-                    </div>
+                    </div> -->
                     
                     <!-- Nom (Bootstrap -->
                     <div class="form-group">
-                        <label for="nom">Votre Nom*</label>
+                        <label for="nom">Nom*</label>
                         <input id="nom" type="text" class="form-control" onblur="func_nom()" required>
                         <strong id="nom_verif"></strong>
                     </div>
@@ -160,16 +160,23 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <br><br>-->
                     <!-- Prenom Bootstrap -->
                     <div class="form-group">
-                        <label for="prenom">Votre Prénom*</label>
+                        <label for="prenom">Prénom*</label>
                         <input id="prenom" type="text" class="form-control" onblur="func_prenom()" required>
                         <strong id="prenom_verif"></strong>
                     </div>
                     <!-- Prenom (me) 
                     <label for="prenom" class="form_col" for="prenom">Prénom*</label>
                     <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="prenom_verif"></strong>-->
+
+                     <!-- Entreprise Bootstrap -->
+                     <div class="form-group">
+                        <label for="entreprise">Entreprise</label>
+                        <input id="entreprise" type="text" class="form-control">
+                    </div>
+
                     <!-- Email BootStrap-->
                     <div class="form-group">
-                        <label for="email">Votre Adresse E-mail*</label>
+                        <label for="email">E-mail*</label>
                         <input type="email" class="form-control" id="email" onblur="func_email()" aria-describedby="emailHelp">
                         <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas votre e-mail.</small>
                         <strong id="email_verif"></strong>
@@ -178,23 +185,31 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <label for="email" class="form_col">Votre Adresse e-mail*</label>
                     <input id="email" type="email" name="email" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="email_verif"></strong> -->
                     <!-- Service concerné -->
+
+                     <!-- pays Bootstrap -->
+                     <div class="form-group">
+                        <label for="pays">Pays</label>
+                        <input id="pays" type="text" class="form-control">
+                    </div>
+                     <!-- Sujet Bootstrap -->
+                     <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input id="sujet" type="text" class="form-control">
+                    </div>
                     <div class="form-group">
-                        <label for="service">Service concerné*</label>
+                        <label for="service">Catégorie*</label>
                         <select id="service" class="form-control" name="service" onblur="func_service()" required>
-                            <option disabled selected value="">Sélectionnez le service</option>
-                            <option value="accueil" id="accueil">Accueil - Général</option>
-                            <option value="evenementiel" id="evenementiel">Evenementiel</option>
-                            <option value="chambre" id="chambre">Chambres</option>
+                            <option disabled selected value="">Sélectionnez la catégorie</option>
+                            <option value="accueil" id="accueil">Ordre général</option>
+                            <option value="chambre" id="chambre">Chambre</option>
                             <option value="restaurant" id="restaurant">Restaurant</option>
                             <option value="spa" id="spa">Spa & Soins</option>
-                            <option value="administratif" id="administratif">Administratif</option>
-                            <option value="webmaster" id="china">Webmaster</option>
                         </select>
                         <strong id="service_verif"></strong>
                     </div>
                     <!-- Zone de texte (Bootstrap) -->
                     <div class="form-group">
-                        <label for="zonedetexte">Votre Message*</label>
+                        <label for="zonedetexte">Message*</label>
                         <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
                         <strong id="zonedetexte_verif"></strong>
                     </div>
