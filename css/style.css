@@ -44,7 +44,7 @@ p, ul, td{
     font-size: 1em;
 }
 
-ul, td, th, tr{
+td, th, tr{
   border: 1px solid gray;
 }
 
