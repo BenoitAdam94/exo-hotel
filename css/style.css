@@ -1,6 +1,6 @@
-body{
-    font-family: 'Cantarel', 'Cormorant', serif;
-    font-family: 'Amiri', serif;    
+html, body{
+    /* font-family: 'Cantarell', 'serif; */
+    font-family: 'Amiri', serif;
 }
 
 .container{
