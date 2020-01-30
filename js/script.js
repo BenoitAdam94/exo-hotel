@@ -48,7 +48,8 @@ $(document).ready(function(){
 		});
 	$('.reserver-style').mouseover(function(){   
 			$(this).css({'color':'rgba(148, 136, 30, 0.87)','background-color':'white'});
-		});
+    });
+  
 	$('span').hover(
 		function(){   
 			$(this).css('color','grey');
