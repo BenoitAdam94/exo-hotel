@@ -115,10 +115,14 @@ function func_soins_img() {
 
 /* ****** Formulaire de contact ****** */
 
-var civf = false
+var civf = false // Obsolete
+
 var nomf = false
 var prenomf = false
+var entreprisef = false
 var emailf = false
+var paysf = false
+var sujetf = false
 var servicef = false
 var zonedetextef = false
 
@@ -128,7 +132,7 @@ function redborder(nom) {
 
 function greenborder(nom) {
   nom.style.border = "2px solid green";
-  }  
+  }
 
 function func_civilite() {
   var radio = document.getElementsByName('civilite');
@@ -167,18 +171,48 @@ function func_prenom() {
   }
 }
 
+function func_entreprise() {
+  if (entreprise.value.length < 2) {
+    entreprise_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(entreprise);
+    entreprisef = false;
+  }else{
+    entreprise_verif.innerHTML = '';
+    greenborder(entreprise);
+    entreprisef = true;
+  }
+}
+
+function func_pays() {
+  if (pays.value.length < 2) {
+    pays_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(pays);
+    paysf = false;
+  }else{
+    pays_verif.innerHTML = '';
+    greenborder(pays);
+    paysf = true;
+  }
+}
+
+function func_sujet() {
+  if (sujet.value.length < 2) {
+    sujet_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(sujet);
+    sujetf = false;
+  }else{
+    sujet_verif.innerHTML = '';
+    greenborder(sujet);
+    sujetf = true;
+  }
+}
+
 function func_email() {
   
-  for (i = 0; i < email.value.length; i++) {
-  console.log(email[i]);
-    }
-  if (email.value.length < 7) {
+if (email.value.length < 7) {
     email_verif.innerHTML = 'Minimum 7 charactères';
     redborder(email);
     emailf = false;
-  if(email.value.length){
-
-  }
   }else{
     email_verif.innerHTML = '';
     greenborder(email);
@@ -212,8 +246,9 @@ function func_service() {
 }
 
 function inscription() {
-  console.log(civf, nomf, prenomf, emailf, servicef, zonedetextef);
-  if (civf && nomf && prenomf && emailf && servicef && zonedetextef) {
+  console.log(nomf, prenomf, emailf, paysf, sujetf, entreprisef, servicef, zonedetextef);
+  func_service();
+  if (nomf && prenomf && emailf && paysf && sujetf && entreprisef && servicef && zonedetextef) {
     alert('Le message a bien été envoyé');
     event.preventDefault();
   }else{

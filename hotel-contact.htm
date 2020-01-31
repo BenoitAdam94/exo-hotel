@@ -127,51 +127,24 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <form method="get" id="formulaire">
                     <fieldset>
                     <legend class="text-center">Remplissez le formulaire pour nous contacter, réponse sous 48h maximum.</legend>
-                    <!-- Radio (BootStrap) 
-                    <div class="form-check">
-                        <input class="form-check-input" id="homme" type="radio" name="civilite" value="h" blur="func_civilite()">
-                        <label class="form-check-label" for="homme">
-                          Homme
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" id="femme" type="radio" name="civilite" value="f" blur="func_civilite()">
-                        <label class="form-check-label" for="femme">
-                          Femme
-                        </label>
-                    </div> -->
-                    <!-- Bouton Radio 
-                    <div class="form-group" id="civ">
-                      <label class="text-left">Sexe : </label>
-                      <input type="radio" name="civilite" value="h" id="homme" onblur="func_civilite()"> Homme &nbsp;
-                      <input type="radio" name="civilite" value="f" id="femme" onblur="func_civilite()"> Femme
-                      <strong id="civilite_verif"></strong>
-                    </div> -->
-                    
                     <!-- Nom (Bootstrap -->
                     <div class="form-group">
                         <label for="nom">Nom*</label>
                         <input id="nom" type="text" class="form-control" onblur="func_nom()" required>
                         <strong id="nom_verif"></strong>
                     </div>
-                    <!-- Nom (me)
-                    <label for="nom" class="form_col" for="nom">Nom*</label>
-                    <input id="nom" type="text" name="nom" placeholder="Votre Nom" onblur="func_nom()" required> <strong id="nom_verif"></strong>
-                    <br><br>-->
                     <!-- Prenom Bootstrap -->
                     <div class="form-group">
                         <label for="prenom">Prénom*</label>
                         <input id="prenom" type="text" class="form-control" onblur="func_prenom()" required>
                         <strong id="prenom_verif"></strong>
                     </div>
-                    <!-- Prenom (me) 
-                    <label for="prenom" class="form_col" for="prenom">Prénom*</label>
-                    <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="prenom_verif"></strong>-->
 
                      <!-- Entreprise Bootstrap -->
                      <div class="form-group">
                         <label for="entreprise">Entreprise</label>
-                        <input id="entreprise" type="text" class="form-control">
+                        <input id="entreprise" type="text" class="form-control" onblur="func_entreprise()">
+                        <strong id="entreprise_verif"></strong>
                     </div>
 
                     <!-- Email BootStrap-->
@@ -181,21 +154,21 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas votre e-mail.</small>
                         <strong id="email_verif"></strong>
                     </div>
-                    <!-- Email (me) 
-                    <label for="email" class="form_col">Votre Adresse e-mail*</label>
-                    <input id="email" type="email" name="email" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="email_verif"></strong> -->
-                    <!-- Service concerné -->
 
-                     <!-- pays Bootstrap -->
+                     <!-- Pays Bootstrap -->
                      <div class="form-group">
                         <label for="pays">Pays</label>
-                        <input id="pays" type="text" class="form-control">
+                        <input id="pays" type="text" class="form-control" onblur="func_pays()">
+                        <strong id="pays_verif"></strong>
                     </div>
-                     <!-- Sujet Bootstrap -->
+
+                    <!-- Sujet Bootstrap -->
                      <div class="form-group">
                         <label for="sujet">Sujet</label>
-                        <input id="sujet" type="text" class="form-control">
+                        <input id="sujet" type="text" class="form-control" onblur="func_sujet()">
+                        <strong id="sujet_verif"></strong>
                     </div>
+                    <!-- Service Bootstrap -->
                     <div class="form-group">
                         <label for="service">Catégorie*</label>
                         <select id="service" class="form-control" name="service" onblur="func_service()" required>
@@ -213,10 +186,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
                         <strong id="zonedetexte_verif"></strong>
                     </div>
-                    <!-- Zone de texte (me)
-                    <label for="zonedetexte" class="form_col" for="zonedetexte">Votre Message*</label>
-                        <textarea id="zonedetexte" type="textarea" name="zonedetext" placeholder="Votre Message" rows="4" cols="40" onblur="func_zonedetexte()" required></textarea> <strong id="zonedetexte_verif"></strong>
-                        <br> -->
                     <!-- Newsletter (Bootstrap) -->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="newsletter">
@@ -224,21 +193,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             Je désire recevoir la newsletter chaque mois
                         </label>
                     </div>
-                    <!-- Newsletter (me)
-                    <label class="form_col"></label>
-                    <input type="checkbox" name="newsletter" value="newsletter" id="newsletter"> Je désire recevoir la newsletter chaque mois
-                  
-                    <br> -->
                     <!-- Formcheck (Bootstrap) -->
                     <div class="form-group p-2">
                         <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="soumettre" onclick="inscription()">
                     </div>
-                    <br>
-                    <!-- Formcheck (me) 
-                        <label  class="form_col"></label>
-                        <input type="submit" value="Inscription" name="inscription" id="soumettre">
-                        <input type="reset" value="reset" name="reset">
-                    -->
                     <br>
                 </fieldset>
                   </form>
