@@ -307,7 +307,17 @@ var dateArrivee = convertion_date_jquery(dateArrivee);
 // console.info('date_arv'+dateArrivee+typeof(dateArrivee));
 
 
+/* Test fonction
 
+function dateJourOk(){
+  if (dateArrivee < date_ajd);
+    alert("false");
+} else{
+  alert('La date choisie ne peut pas être antérieure à la date actuelle');
+}
+*/
+
+/*
 function func_dateJour(){
   
   if(dateArrivee < dateJour){
@@ -329,6 +339,8 @@ function func_verifDate(){
     alert("La date de départ doit être ultérieure à la date d'arrivée");
   }
  }
+
+ */
 
  function func_log_resa(){
    console.info(dateArrivee);
