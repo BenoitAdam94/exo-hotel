@@ -8,74 +8,149 @@
 
 
 <url>
-  <loc>http://benoit-sakote.fr/</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/index.htm</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/index.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/chambres-et-gammes.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/reservation.htm</loc>
+  <lastmod>2020-01-30T11:53:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/restaurant-et-carte.htm</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-qui-sommes-nous.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/spa-soin.htm</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/chambres-et-gammes.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/hotel-evenements.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/restaurant-et-carte.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/hotel-presse.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/spa-soin.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/avis.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-evenements.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/hotel-acces.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-presse.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/hotel-contact.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/avis.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/mentions-legales.htm</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-acces.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/CGV.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-contact.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/actualites.htm</loc>
-  <lastmod>2020-01-20T11:49:20+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/mentions-legales.htm</loc>
+  <lastmod>2020-01-30T11:53:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://benoit-sakote.fr/hotel-recrutement.htm</loc>
-  <lastmod>2020-01-20T11:49:21+00:00</lastmod>
+  <loc>http://benoit-sakote.fr/hotelcop/CGV.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/actualites.htm</loc>
+  <lastmod>2020-01-30T11:53:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/hotel-recrutement.htm</loc>
+  <lastmod>2020-01-30T11:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/panier.htm</loc>
+  <lastmod>2020-01-30T11:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/Textes/carte-midi.pdf</loc>
+  <lastmod>2020-02-01T10:53:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/Textes/carte-apresmidi.pdf</loc>
+  <lastmod>2020-02-01T10:53:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/Textes/carte-soir.pdf</loc>
+  <lastmod>2020-02-01T10:53:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Air-France-Madame-couv-30-septembre-2015.pdf</loc>
+  <lastmod>2020-01-30T11:53:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/couv-Elle-deco-parution-Octobre-2015.pdf</loc>
+  <lastmod>2020-01-30T11:53:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Elle-3-decembre-2015-Couverture.pdf</loc>
+  <lastmod>2020-01-30T11:53:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Figaroscope-23-septembre-2015-COUV.pdf</loc>
+  <lastmod>2020-01-30T11:53:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Hotel-Providence-Grazia-18decembre2015-couv-magnapresse.pdf</loc>
+  <lastmod>2020-01-30T11:53:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Providence-AD-MAGAZINE-FevrierMars2016-Magnapresse-Couverture.pdf</loc>
+  <lastmod>2020-01-30T11:53:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Providence-Artravel-28janvier2016-couv-Magnapresse.pdf</loc>
+  <lastmod>2020-01-30T11:53:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/Providence-Casa-Vogue-BrC%CC%A7sil-22Janvier2016-couv-Magnapresse.pdf</loc>
+  <lastmod>2020-01-30T11:53:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://benoit-sakote.fr/hotelcop/img/presse/BIBA-novembre-2015.pdf</loc>
+  <lastmod>2020-01-30T11:53:24+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
