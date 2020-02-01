@@ -246,7 +246,6 @@ function func_thematique() {
 }
 
 
-
 function func_zonedetexte2() {
   if (zonedetexte2.value.length < 20) {
     zonedetexte2_verif.innerHTML = 'Minimum 20 caractères';
