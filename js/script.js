@@ -37,7 +37,7 @@ function searchbargrow(mediax) {
   searchbargrow(mediax);
   mediax.addListener(searchbargrow);
 
-/* Lydie */
+/* Lydie 
 
 $(document).ready(function(){
 	$(".reserver-style").click(function(){
@@ -65,6 +65,7 @@ $(document).ready(function(){
 			$(this).css('color','grey');
 		});
 });
+*/
 
 /* heure repas selon Midi ou Soir */
 
