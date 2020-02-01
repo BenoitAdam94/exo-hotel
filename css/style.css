@@ -1,6 +1,6 @@
-body{
-    font-family: 'Cantarel', 'Cormorant', serif;
-    font-family: 'Amiri', serif;    
+html, body{
+    /* font-family: 'Cantarell', 'serif; */
+    font-family: 'Amiri', serif;
 }
 
 .container{
@@ -21,6 +21,10 @@ h1{
 }
 
 
+.sansp{
+    list-style-type: circle;
+}
+
 h2,h3,h4,h5,h6{
     color: rgba(148, 136, 30, 0.87);
 }
@@ -38,6 +42,10 @@ h2,h3,h4,h5,h6{
 
 p, ul, td{
     font-size: 1em;
+}
+
+td, th, tr{
+  border: 1px solid gray;
 }
 
 table {
@@ -154,6 +162,10 @@ a:hover{
 
 .w-80 {
   width: 80% !important;
+}
+
+.w-60 {
+  width: 60% !important;
 }
 
 #tabs{

@@ -48,7 +48,8 @@ $(document).ready(function(){
 		});
 	$('.reserver-style').mouseover(function(){   
 			$(this).css({'color':'rgba(148, 136, 30, 0.87)','background-color':'white'});
-		});
+    });
+  
 	$('span').hover(
 		function(){   
 			$(this).css('color','grey');
@@ -114,10 +115,14 @@ function func_soins_img() {
 
 /* ****** Formulaire de contact ****** */
 
-var civf = false
+var civf = false // Obsolete
+
 var nomf = false
 var prenomf = false
+var entreprisef = false
 var emailf = false
+var paysf = false
+var sujetf = false
 var servicef = false
 var zonedetextef = false
 
@@ -127,7 +132,7 @@ function redborder(nom) {
 
 function greenborder(nom) {
   nom.style.border = "2px solid green";
-  }  
+  }
 
 function func_civilite() {
   var radio = document.getElementsByName('civilite');
@@ -166,18 +171,48 @@ function func_prenom() {
   }
 }
 
+function func_entreprise() {
+  if (entreprise.value.length < 2) {
+    entreprise_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(entreprise);
+    entreprisef = false;
+  }else{
+    entreprise_verif.innerHTML = '';
+    greenborder(entreprise);
+    entreprisef = true;
+  }
+}
+
+function func_pays() {
+  if (pays.value.length < 2) {
+    pays_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(pays);
+    paysf = false;
+  }else{
+    pays_verif.innerHTML = '';
+    greenborder(pays);
+    paysf = true;
+  }
+}
+
+function func_sujet() {
+  if (sujet.value.length < 2) {
+    sujet_verif.innerHTML = 'Minimum 2 charactères';
+    redborder(sujet);
+    sujetf = false;
+  }else{
+    sujet_verif.innerHTML = '';
+    greenborder(sujet);
+    sujetf = true;
+  }
+}
+
 function func_email() {
   
-  for (i = 0; i < email.value.length; i++) {
-  console.log(email[i]);
-    }
-  if (email.value.length < 7) {
+if (email.value.length < 7) {
     email_verif.innerHTML = 'Minimum 7 charactères';
     redborder(email);
     emailf = false;
-  if(email.value.length){
-
-  }
   }else{
     email_verif.innerHTML = '';
     greenborder(email);
@@ -210,13 +245,10 @@ function func_service() {
   }
 }
 
-function log() {
-  console.log(civf, nomf, prenomf, emailf, servicef, zonedetextef);
-}
-
 function inscription() {
-  log();
-  if (civf && nomf && prenomf && emailf && servicef && zonedetextef) {
+  console.log(nomf, prenomf, emailf, paysf, sujetf, entreprisef, servicef, zonedetextef);
+  func_service();
+  if (nomf && prenomf && emailf && paysf && sujetf && entreprisef && servicef && zonedetextef) {
     alert('Le message a bien été envoyé');
     event.preventDefault();
   }else{
@@ -225,6 +257,22 @@ function inscription() {
   }
 }
 
+// var soumettre = document.getElementById('soumettre');
+soumettre.addEventListener("click", inscription);
+
+function envoyer_cv() {
+  console.log(nomf, prenomf, emailf, zonedetextef);
+  if (nomf && prenomf && emailf && zonedetextef) {
+    alert('Le CV a bien été envoyé');
+    event.preventDefault();
+  }else{
+    alert('Le formulaire est incomplet');
+    event.preventDefault();
+  }
+}
+
+// var envoyercv = document.getElementById('envoyercv');
+envoyercv.addEventListener("click", envoyer_cv);
 
 /* ******* fonctions formulaire avis ******/
 
@@ -260,10 +308,52 @@ function func_zonedetexte2() {
 
 /* ********** formulaire réservation chambre ***** */
 
-var dateArrivee = 'date_arv';
-var dateJour = new Date();
+function yyyymmdd() {
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    var yyyymmdd = y + m + d;
+    return yyyymmdd;
+}
 
+// var date = '01/21/2020'; // date example
+
+function convertion_date_jquery(date) {
+    var day = date.slice(3,5);
+    var month = date.slice(0,2);
+    var year = date.slice(6,10);
+    var cdj = year + month + day;
+    var cdj = parseInt(cdj);
+    console.log(cdj+typeof(cdj));
+    return cdj
+}
+
+var date_ajd = yyyymmdd();
+date_ajd = parseInt(date_ajd);
+// console.info('date_adj'+date_ajd+typeof(date_ajd));
+
+//var date_arv = document.getElementById('date_arv');
+var dateArrivee = date_arv.value;
+var dateArrivee = convertion_date_jquery(dateArrivee);
+// console.info('date_arv'+dateArrivee+typeof(dateArrivee));
+
+
+/* Test fonction
+
+function dateJourOk(){
+  if (dateArrivee < date_ajd);
+    alert("false");
+} else{
+  alert('La date choisie ne peut pas être antérieure à la date actuelle');
+}
+*/
+
+/*
 function func_dateJour(){
+  
   if(dateArrivee < dateJour){
     alert("false");
   }
@@ -271,6 +361,7 @@ function func_dateJour(){
     alert('La date choisie ne peut pas être antérieure à la date actuelle');
   }
 }
+
 
 function func_verifDate(){
   var a=new Date('date_arv');			// date d'arrivée
@@ -281,6 +372,12 @@ function func_verifDate(){
   else{
     alert("La date de départ doit être ultérieure à la date d'arrivée");
   }
+ }
+
+ */
+
+ function func_log_resa(){
+   console.info(dateArrivee);
  }
 
 /* ************ Formulaire réservation Table ******** */
@@ -382,4 +479,3 @@ function func_heuresoin() {
   }
 }
 
-// soumettre.addEventListener("click", inscription);

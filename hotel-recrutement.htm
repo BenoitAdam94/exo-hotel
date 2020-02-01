@@ -116,17 +116,17 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 </div>
                 
             </div>
-            <div class="text-center">
+            <div>
                 <h2>Carrières</h2>
                 <br>
                 <p>Vous avez la fibre du service ? Vous possédez une formation en hôtellerie/restauration ou une expérience significative dans le domaine ?<p>
                 <p>Alors rejoignez-nous ! L'<em>HôtelCop</em> et sa filiale sont constamment à l'écoute de nouveaux talents.</p>
             </div>
             <div class="row p-2">
-                <h2 class="text-center">H2 a completer</h2>
+            
             </div>
             <div class="row p-2 justify-content-around">
-                <div class="col-sm-3 border p-2">
+                <div class="col-sm-3 border p-2 mb-5">
                 <h3>Restauration</h3>
                     <button id="bouton-1">Voir les offres</button>
                     <div class="col-12 bloc p-2 m-2" id="bloc-1">
@@ -145,7 +145,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </form>
                     </div>
                 </div>
-                <div class="col-sm-3 border p-2">
+                <div class="col-sm-3 border p-2 mb-5">
                     <h3>Hôtellerie</h3>
                         <button id="bouton-2">Voir les offres</button>
                         <div class="col-12 bloc p-2 m-2" id="bloc-2">
@@ -164,7 +164,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </form>
                         </div>
                     </div>
-                <div class="col-sm-3 border p-2">
+                <div class="col-sm-3 border p-2 mb-5">
                 <h3>Evènementiel</h3>
                     <button id="bouton-3">Voir les offres</button>
                     <div class="col-12 bloc p-2 m-2" id="bloc-3">
@@ -184,52 +184,109 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center p-3">
+                <form method="get" id="formulaire">
+                    <fieldset>
+                    <legend class="text-center">Candidature spontanée</legend>
+                    
+                    <!-- Nom (Bootstrap -->
+                    <div class="form-group">
+                        <label for="nom">Votre Nom*</label>
+                        <input id="nom" type="text" class="form-control" onblur="func_nom()" required>
+                        <strong id="nom_verif"></strong>
+                    </div>
+                    <!-- Prenom Bootstrap -->
+                    <div class="form-group">
+                        <label for="prenom">Votre Prénom*</label>
+                        <input id="prenom" type="text" class="form-control" onblur="func_prenom()" required>
+                        <strong id="prenom_verif"></strong>
+                    </div>
+                     <!-- Entreprise Bootstrap -->
+                     <div class="form-group">
+                        <label for="entreprise">Entreprise</label>
+                        <input id="entreprise" type="text" class="form-control">
+                    </div>
+                    <!-- Email BootStrap-->
+                    <div class="form-group">
+                        <label for="email">Votre Adresse E-mail*</label>
+                        <input type="email" class="form-control" id="email" onblur="func_email()" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas votre e-mail.</small>
+                        <strong id="email_verif"></strong>
+                    </div>
+                    <!-- CV PJ-->
+                    <div class="form-group">
+                        <label for="cv">CV</label>
+                        <input type="file" class="form-control-file" id="cv">
+                     
+                    </div>
+                    <!-- lettre de motvation -->
+                    <div class="form-group">
+                        <label for="lm">Lettre de motivation</label>
+                        <input type="file" class="form-control-file" id="lm">
+                       
+                    </div>
+                    <!-- Zone de texte (Bootstrap) -->
+                    <div class="form-group">
+                        <label for="zonedetexte">Votre Message*</label>
+                        <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
+                        <strong id="zonedetexte_verif"></strong>
+                    </div>
 
+                    <!-- Newsletter (Bootstrap) -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter">
+                        <label class="form-check-label" for="newsletter">
+                            Je désire recevoir la newsletter chaque mois
+                        </label>
+                    </div>
+
+                    <!-- Formcheck (Bootstrap) -->
+                    <div class="form-group p-2">
+                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="envoyercv">
+                    </div>
+                    <br>
+      
+                    <br>
+                </fieldset>
+                  </form>
+            </div>
                 
                
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
             
-            <footer class="row footer justify-content-around">
+            <footer class="row footer ">
                 
-                <div class="col-sm-5 p-2 pl-5">
+                <div class="col-sm-4 pl-5 pt-4">
                     <p><a href="hotel-acces.htm">
-                    <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
-                    <i class="fas fa-location-arrow"></i> Plan et accès<br></a>
-                    <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
-                    <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter</a><br>
-                    <a href="javascript:window.print()"><i class="fas fa-print"></i> Imprimer</a></p>
+                        <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
+                        <i class="fas fa-location-arrow"></i> Plan et accès<br></a>
+                        <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
+                        <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter</a><br>
+                        <a href="javascript:window.print()"><i class="fas fa-print"></i> Imprimer cette page</a></p>
                 </div>
-                <div class="col-sm-5">
-                    <div class="row">
-                    <div class="col-sm-8 p-2">
+           
+                <div class="col-sm-4 pt-4">
                     <ul>
-                        <li><a href="plan-du-site.htm">Plan du site</a></li>
                         <li><a href="mentions-legales.htm">Mentions légales</a></li>
-                        <li><a href="CGV.htm">Conditions Générales de vente</a></li>
-                        <li><a href="actualites.htm">Les dernières news du secteur de l'hôtellerie</a></li>
+                        <li><a href="CGV.htm">Conditions Générales de Vente</a></li>
+                        <li><a href="actualites.htm">L'actualité du secteur hôtelier</a></li>
                         <li><a href="hotel-recrutement.htm">Recrutement</a></li>
                     </ul>
-                    </div>
-                    <div class="col-sm-4 m-0 p-0 text-center">
-                    
-                    
+                </div>
+            
+                <div class="col-sm-4 text-center pt-4">
+                
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x btn-dark btn-lg"></i></a>
                 
-                    
-                    
-                    </div>
-                    </div>
-                    
-                    
-                    
-                    
-                </div>
+                </div>  
+                                    
+            
 
-            </footer>
+        </footer>
         </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

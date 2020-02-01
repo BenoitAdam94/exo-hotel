@@ -119,7 +119,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 
             </div>
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mt-2">
                     <h2>Nous Contacter</h2>
                 </div>
             </div>
@@ -127,81 +127,65 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                 <form method="get" id="formulaire">
                     <fieldset>
                     <legend class="text-center">Remplissez le formulaire pour nous contacter, réponse sous 48h maximum.</legend>
-                    <!-- Radio (BootStrap) 
-                    <div class="form-check">
-                        <input class="form-check-input" id="homme" type="radio" name="civilite" value="h" blur="func_civilite()">
-                        <label class="form-check-label" for="homme">
-                          Homme
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" id="femme" type="radio" name="civilite" value="f" blur="func_civilite()">
-                        <label class="form-check-label" for="femme">
-                          Femme
-                        </label>
-                    </div> -->
-                    <!-- Bouton Radio -->
-                    <div class="form-group" id="civ">
-                      <label class="text-left">Sexe : </label>
-                      <input type="radio" name="civilite" value="h" id="homme" onblur="func_civilite()"> Homme &nbsp;
-                      <input type="radio" name="civilite" value="f" id="femme" onblur="func_civilite()"> Femme
-                      <strong id="civilite_verif"></strong>
-                    </div>
-                    
                     <!-- Nom (Bootstrap -->
                     <div class="form-group">
-                        <label for="nom">Votre Nom*</label>
+                        <label for="nom">Nom*</label>
                         <input id="nom" type="text" class="form-control" onblur="func_nom()" required>
                         <strong id="nom_verif"></strong>
                     </div>
-                    <!-- Nom (me)
-                    <label for="nom" class="form_col" for="nom">Nom*</label>
-                    <input id="nom" type="text" name="nom" placeholder="Votre Nom" onblur="func_nom()" required> <strong id="nom_verif"></strong>
-                    <br><br>-->
                     <!-- Prenom Bootstrap -->
                     <div class="form-group">
-                        <label for="prenom">Votre Prénom*</label>
+                        <label for="prenom">Prénom*</label>
                         <input id="prenom" type="text" class="form-control" onblur="func_prenom()" required>
                         <strong id="prenom_verif"></strong>
                     </div>
-                    <!-- Prenom (me) 
-                    <label for="prenom" class="form_col" for="prenom">Prénom*</label>
-                    <input id="prenom" type="text" name="prenom" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="prenom_verif"></strong>-->
+
+                     <!-- Entreprise Bootstrap -->
+                     <div class="form-group">
+                        <label for="entreprise">Entreprise</label>
+                        <input id="entreprise" type="text" class="form-control" onblur="func_entreprise()">
+                        <strong id="entreprise_verif"></strong>
+                    </div>
+
                     <!-- Email BootStrap-->
                     <div class="form-group">
-                        <label for="email">Votre Adresse E-mail*</label>
+                        <label for="email">E-mail*</label>
                         <input type="email" class="form-control" id="email" onblur="func_email()" aria-describedby="emailHelp">
                         <small id="emailHelp" class="form-text text-muted">Nous ne partagerons pas votre e-mail.</small>
                         <strong id="email_verif"></strong>
                     </div>
-                    <!-- Email (me) 
-                    <label for="email" class="form_col">Votre Adresse e-mail*</label>
-                    <input id="email" type="email" name="email" placeholder="Votre prénom" onblur="func_prenom()" required> <strong id="email_verif"></strong> -->
-                    <!-- Service concerné -->
+
+                     <!-- Pays Bootstrap -->
+                     <div class="form-group">
+                        <label for="pays">Pays</label>
+                        <input id="pays" type="text" class="form-control" onblur="func_pays()">
+                        <strong id="pays_verif"></strong>
+                    </div>
+
+                    <!-- Sujet Bootstrap -->
+                     <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input id="sujet" type="text" class="form-control" onblur="func_sujet()">
+                        <strong id="sujet_verif"></strong>
+                    </div>
+                    <!-- Service Bootstrap -->
                     <div class="form-group">
-                        <label for="service">Service concerné*</label>
+                        <label for="service">Catégorie*</label>
                         <select id="service" class="form-control" name="service" onblur="func_service()" required>
-                            <option disabled selected value="">Sélectionnez le service</option>
-                            <option value="accueil" id="accueil">Accueil - Général</option>
-                            <option value="evenementiel" id="evenementiel">Evenementiel</option>
-                            <option value="chambre" id="chambre">Chambres</option>
+                            <option disabled selected value="">Sélectionnez la catégorie</option>
+                            <option value="accueil" id="accueil">Ordre général</option>
+                            <option value="chambre" id="chambre">Chambre</option>
                             <option value="restaurant" id="restaurant">Restaurant</option>
                             <option value="spa" id="spa">Spa & Soins</option>
-                            <option value="administratif" id="administratif">Administratif</option>
-                            <option value="webmaster" id="china">Webmaster</option>
                         </select>
                         <strong id="service_verif"></strong>
                     </div>
                     <!-- Zone de texte (Bootstrap) -->
                     <div class="form-group">
-                        <label for="zonedetexte">Votre Message*</label>
+                        <label for="zonedetexte">Message*</label>
                         <textarea id="zonedetexte" class="form-control" name="zonedetexte" rows="3" onblur="func_zonedetexte()" required></textarea>
                         <strong id="zonedetexte_verif"></strong>
                     </div>
-                    <!-- Zone de texte (me)
-                    <label for="zonedetexte" class="form_col" for="zonedetexte">Votre Message*</label>
-                        <textarea id="zonedetexte" type="textarea" name="zonedetext" placeholder="Votre Message" rows="4" cols="40" onblur="func_zonedetexte()" required></textarea> <strong id="zonedetexte_verif"></strong>
-                        <br> -->
                     <!-- Newsletter (Bootstrap) -->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="newsletter">
@@ -209,21 +193,10 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             Je désire recevoir la newsletter chaque mois
                         </label>
                     </div>
-                    <!-- Newsletter (me)
-                    <label class="form_col"></label>
-                    <input type="checkbox" name="newsletter" value="newsletter" id="newsletter"> Je désire recevoir la newsletter chaque mois
-                  
-                    <br> -->
                     <!-- Formcheck (Bootstrap) -->
                     <div class="form-group p-2">
-                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="soumettre">
+                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="soumettre" onclick="inscription()">
                     </div>
-                    <br>
-                    <!-- Formcheck (me) 
-                        <label  class="form_col"></label>
-                        <input type="submit" value="Inscription" name="inscription" id="soumettre">
-                        <input type="reset" value="reset" name="reset">
-                    -->
                     <br>
                 </fieldset>
                   </form>
@@ -231,45 +204,37 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
             <!-- ****** -->
             <!-- footer -->
             <!-- ****** -->
-            <footer class="row footer justify-content-around">
+            <footer class="row footer ">
                 
-                <div class="col-sm-5 p-2 pl-5">
+                <div class="col-sm-4 pl-5 pt-4">
                     <p><a href="hotel-acces.htm">
-                    <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
-                    <i class="fas fa-location-arrow"></i> Plan et accès<br></a>
-                    <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
-                    <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter</a><br>
-                    <a href="javascript:window.print()"><i class="fas fa-print"></i> Imprimer</a></p>
+                        <i class="fas fa-map-marked-alt"></i> 1 avenue Montaigne 75008 PARIS<br>
+                        <i class="fas fa-location-arrow"></i> Plan et accès<br></a>
+                        <a href="tel:+33178223698"><i class="fas fa-phone"></i> +33 (0)1 78 22 36 98</a><br>
+                        <a href="hotel-contact.htm"><i class="fas fa-envelope"></i> Nous contacter</a><br>
+                        <a href="javascript:window.print()"><i class="fas fa-print"></i> Imprimer cette page</a></p>
                 </div>
-                <div class="col-sm-5">
-                    <div class="row">
-                    <div class="col-sm-8 p-2">
+           
+                <div class="col-sm-4 pt-4">
                     <ul>
-                        <li><a href="plan-du-site.htm">Plan du site</a></li>
                         <li><a href="mentions-legales.htm">Mentions légales</a></li>
-                        <li><a href="CGV.htm">Conditions Générales de vente</a></li>
-                        <li><a href="actualites.htm">Les dernières news du secteur de l'hôtellerie</a></li>
+                        <li><a href="CGV.htm">Conditions Générales de Vente</a></li>
+                        <li><a href="actualites.htm">L'actualité du secteur hôtelier</a></li>
                         <li><a href="hotel-recrutement.htm">Recrutement</a></li>
                     </ul>
-                    </div>
-                    <div class="col-sm-4 m-0 p-0 text-center">
-                    
-                    
+                </div>
+            
+                <div class="col-sm-4 text-center pt-4">
+                
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x btn-dark btn-lg"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x btn-dark btn-lg"></i></a>
                 
-                    
-                    
-                    </div>
-                    </div>
-                    
-                    
-                    
-                    
-                </div>
+                </div>  
+                                    
+            
 
-            </footer>
+        </footer>
         </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
