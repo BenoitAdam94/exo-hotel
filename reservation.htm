@@ -130,10 +130,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-chambre">
                         <label for="date_arv">Date d'arrivée</label>
-                        <input type="text" class="form-control" id="date_arv" onblur="func_dateJour()" required>
+                        <input type="text" class="form-control" id="date_arv" onblur="yyyymmdd()" onblur="convertion_date_jquery()" onblur="func_dateJourOk()" required>
+                        <strong id="date_arv_verif"></strong>
                         <br>
                         <label for="date_dep">Date de départ</label>
-                        <input type="text" class="form-control" id="date_dep" onblur="func_verifDate()" required>
+                        <input type="text" class="form-control" id="date_dep" onblur="yyyymmdd()" onblur="convertion_date_jquery()" onblur="func_verifDate()" required>
+                        <strong id="date_dep_verif"></strong>
                         <br>
                         <label for="adultes">Nombre d'adultes</label>
                         <select id="adultes" class="form-control" name="adultes" onblur="func_adultes()" required>

@@ -357,41 +357,38 @@ var dateArrivee = date_arv.value;
 var dateArrivee = convertion_date_jquery(dateArrivee);
 // console.info('date_arv'+dateArrivee+typeof(dateArrivee));
 
+//var date_depart = document.getElementById('date_dep');
+var dateDepart = date_dep.value;
+var dateDepart = convertion_date_jquery(dateDepart);
+// console.info('date_dep'+dateDepart+typeof(dateDepart));
 
-/* Test fonction
 
-function dateJourOk(){
-  if (dateArrivee < date_ajd);
-    alert("false");
-} else{
-  alert('La date choisie ne peut pas être antérieure à la date actuelle');
-}
-*/
+var date_arvf = false;
+var date_depf = false;
 
-/*
-function func_dateJour(){
-  
-  if(dateArrivee < dateJour){
-    alert("false");
+function func_dateJourOk(){
+  if (dateArrivee < date_ajd) {
+    date_arv_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être antérieure à la date du jour
+    redborder(date_arv);
+    date_arvf = false;
+  }else{
+    date_arv_verif.innerHTML = '';
+    greenborder(date_arv);
+    date_arvf = true;
   }
-  else{
-    alert('La date choisie ne peut pas être antérieure à la date actuelle');
-  }
-}
 
 
 function func_verifDate(){
-  var a=new Date('date_arv');			// date d'arrivée
-  var b=new Date('date_dep'); // date de départ
-  if(a > b){ 
-    alert("false");
+  if (dateArrivee > dateDepart) {
+    date_dep_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être ultérieure à la date de départ
+    redborder(date_dep);
+    date_depf = false;
+  }else{
+    date_dep_verif.innerHTML = '';
+    greenborder(date_dep);
+    date_depf = true;
   }
-  else{
-    alert("La date de départ doit être ultérieure à la date d'arrivée");
-  }
- }
 
- */
 
  function func_log_resa(){
    console.info(dateArrivee);
@@ -405,6 +402,7 @@ var personnesf = false
 var dateArrivee2 = 'date_table';
 
 
+/* A Actualiser lorsque la f° marchera pour la resa chambre
 function func_dateJour(){
   if(dateArrivee2 < dateJour){
     alert("false");
@@ -413,6 +411,7 @@ function func_dateJour(){
     alert('La date choisie ne peut pas être antérieure à la date actuelle');
   }
 }
+*/
 
 function func_heuretablemidi() {
   if (midi_heure.value == 0)
