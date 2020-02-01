@@ -132,17 +132,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="col-12 bloc p-2 m-2" id="bloc-1">
                     <h4>Serveur-Serveuses</h4>
                     <p>Restaurant brasserie située rue Montorgueil à Paris recherche des SERVEURS(SES) expérimenté(e)s et motivé(e)s, en service continu avec 2 jours de repos consécutifs.</p>
-                    <form>
-                        <div class="form-group">
-                          <label for="cv1">CV</label>
-                          <input type="file" class="form-control-file" id="cv1">
-                        </div>
-                        <div class="form-group">
-                            <label for="lm1">Lettre de motivation</label>
-                            <input type="file" class="form-control-file" id="lm1">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
-                    </form>
                     </div>
                 </div>
                 <div class="col-sm-3 border p-2 mb-5">
@@ -151,17 +140,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         <div class="col-12 bloc p-2 m-2" id="bloc-2">
                         <h4>Hôte d'accueil</h4>
                         <p>Nous sommes actuellement à la recherche d'un(e) hôte(sse) d'accueil. Travail de nuit 1 semaine sur 3. Ponctualité et sérieux exigés.</p>
-                        <form>
-                            <div class="form-group">
-                              <label for="cv2">CV</label>
-                              <input type="file" class="form-control-file" id="cv2">
-                            </div>
-                            <div class="form-group">
-                                <label for="lm2">Lettre de motivation</label>
-                                <input type="file" class="form-control-file" id="lm2">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
-                        </form>
                         </div>
                     </div>
                 <div class="col-sm-3 border p-2 mb-5">
@@ -170,17 +148,6 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="col-12 bloc p-2 m-2" id="bloc-3">
                     <h4>Assistant d'organisation evènementiel</h4>
                     <p>Dans le cadre de l'acroissement de nos équipes, nous cherchons un assistant en organisation d'evènements (Mariage, Pacs, Barmitsva, Noces d'argents, coktail d'entreprises).</p>
-                    <form>
-                        <div class="form-group">
-                          <label for="cv3">CV</label>
-                          <input type="file" class="form-control-file" id="cv3">
-                        </div>
-                        <div class="form-group">
-                            <label for="lm3">Lettre de motivation</label>
-                            <input type="file" class="form-control-file" id="lm3">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Soumettre votre candidature</button>
-                    </form>
                     </div>
                 </div>
             </div>
@@ -204,7 +171,8 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                      <!-- Entreprise Bootstrap -->
                      <div class="form-group">
                         <label for="entreprise">Entreprise</label>
-                        <input id="entreprise" type="text" class="form-control">
+                        <input id="entreprise" type="text" class="form-control" onblur="func_entreprise()">
+                        <strong id="entreprise_verif"></strong>
                     </div>
                     <!-- Email BootStrap-->
                     <div class="form-group">
@@ -216,14 +184,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <!-- CV PJ-->
                     <div class="form-group">
                         <label for="cv">CV</label>
-                        <input type="file" class="form-control-file" id="cv">
-                     
+                        <input type="file" class="form-control-file" id="cv" onblur="func_pj(cv)">
                     </div>
-                    <!-- lettre de motvation -->
+                    <!-- lettre de motivation -->
                     <div class="form-group">
                         <label for="lm">Lettre de motivation</label>
-                        <input type="file" class="form-control-file" id="lm">
-                       
+                        <input type="file" class="form-control-file" id="lm" onblur="func_pj(lm)">
                     </div>
                     <!-- Zone de texte (Bootstrap) -->
                     <div class="form-group">
@@ -242,7 +208,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
 
                     <!-- Formcheck (Bootstrap) -->
                     <div class="form-group p-2">
-                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="envoyercv">
+                        <input type="submit" class="btn btn-primary mb-2" value="Envoyer le message" name="inscription" id="envoyercv" onclick="envoyer_cv()">
                     </div>
                     <br>
       

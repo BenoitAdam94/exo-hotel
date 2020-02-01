@@ -125,6 +125,8 @@ var paysf = false
 var sujetf = false
 var servicef = false
 var zonedetextef = false
+var cvf = false
+var lmf = false
 
 function redborder(nom) {
   nom.style.border = "2px solid red";
@@ -220,6 +222,7 @@ if (email.value.length < 7) {
   }
 }
 
+
 function func_zonedetexte() {
   if (zonedetexte.value.length < 20) {
     zonedetexte_verif.innerHTML = 'Minimum 20 charactères';
@@ -229,6 +232,20 @@ function func_zonedetexte() {
     zonedetexte_verif.innerHTML = '';
     greenborder(zonedetexte);
     zonedetextef = true;
+  }
+}
+
+function func_pj(pj) {
+  if (pj.value == 0)
+  {
+    redborder(pj);
+    if (pj.id == 'cv'){ cvf = false; }
+    else if (pj.id == 'lm') { lmf = false; }
+  }
+  else{
+    greenborder(pj);
+    if (pj.id == 'cv'){ cvf = true; }
+    else if (pj.id == 'lm') { lmf = true; }
   }
 }
  
@@ -258,11 +275,11 @@ function inscription() {
 }
 
 // var soumettre = document.getElementById('soumettre');
-soumettre.addEventListener("click", inscription);
+// soumettre.addEventListener("click", inscription);
 
 function envoyer_cv() {
-  console.log(nomf, prenomf, emailf, zonedetextef);
-  if (nomf && prenomf && emailf && zonedetextef) {
+  console.log(nomf, prenomf, entreprisef, emailf, cvf, lmf, zonedetextef);
+  if (nomf && prenomf && entreprise && emailf && cvf && lmf && zonedetextef) {
     alert('Le CV a bien été envoyé');
     event.preventDefault();
   }else{
@@ -272,7 +289,7 @@ function envoyer_cv() {
 }
 
 // var envoyercv = document.getElementById('envoyercv');
-envoyercv.addEventListener("click", envoyer_cv);
+// envoyercv.addEventListener("click", envoyer_cv);
 
 /* ******* fonctions formulaire avis ******/
 
