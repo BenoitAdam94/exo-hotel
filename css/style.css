@@ -66,10 +66,12 @@ th, td {
 
 a{
     color: #111;
+    
 }
 
 a:hover{
     color:#111;
+    text-decoration: none;
 }
 
 .ensavoirplus-position{
@@ -152,6 +154,7 @@ a:hover{
   background-color: rgba(148, 136, 30, 0.87);
   color: white;
   text-align: center;
+  
 }
 
 .reserver-position{
