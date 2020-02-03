@@ -130,11 +130,11 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-chambre">
                         <label for="date_arv">Date d'arrivée</label>
-                        <input type="text" class="form-control" id="date_arv" onblur="yyyymmdd()" onblur="convertion_date_jquery()" onblur="func_dateJourOk()" required>
+                        <input type="text" class="form-control" id="date_arv" required>
                         <strong id="date_arv_verif"></strong>
                         <br>
                         <label for="date_dep">Date de départ</label>
-                        <input type="text" class="form-control" id="date_dep" onblur="yyyymmdd()" onblur="convertion_date_jquery()" onblur="func_verifDate()" required>
+                        <input type="text" class="form-control" id="date_dep"  required>
                         <strong id="date_dep_verif"></strong>
                         <br>
                         <label for="adultes">Nombre d'adultes</label>
@@ -156,7 +156,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                             <option value="4" id="4_enfant">4</option>
                         </select>
                         <br>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-chambre">Réserver une chambre</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-chambre" onclick="reserver_chambre()">Réserver une chambre</button>
                         <br>
                         <!--<button class="btn btn-primary btn-lg btn-block kkdoie" name="" onclick="func_log_resa()" id="log">log</button>-->
                     </form>

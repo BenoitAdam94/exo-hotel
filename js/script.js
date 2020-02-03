@@ -334,64 +334,87 @@ function yyyymmdd() {
     (d.length == 1) && (d = '0' + d);
     (m.length == 1) && (m = '0' + m);
     var yyyymmdd = y + m + d;
+    var yyyymmdd = parseInt(yyyymmdd);
     return yyyymmdd;
 }
 
 // var date = '01/21/2020'; // date example
 
 function convertion_date_jquery(date) {
+    console.info('function datejquery');
     var day = date.slice(3,5);
     var month = date.slice(0,2);
     var year = date.slice(6,10);
     var cdj = year + month + day;
     var cdj = parseInt(cdj);
-    console.log(cdj+typeof(cdj));
+    console.log('cdj = ' +cdj+typeof(cdj));
     return cdj
 }
 
-var date_ajd = yyyymmdd();
-date_ajd = parseInt(date_ajd);
-// console.info('date_adj'+date_ajd+typeof(date_ajd));
-
-//var date_arv = document.getElementById('date_arv');
-var dateArrivee = date_arv.value;
-var dateArrivee = convertion_date_jquery(dateArrivee);
-// console.info('date_arv'+dateArrivee+typeof(dateArrivee));
-
-//var date_depart = document.getElementById('date_dep');
-var dateDepart = date_dep.value;
-var dateDepart = convertion_date_jquery(dateDepart);
-// console.info('date_dep'+dateDepart+typeof(dateDepart));
-
-
 var date_arvf = false;
 var date_depf = false;
+var date_ajd = yyyymmdd();
+date_ajd = parseInt(date_ajd);
 
-function func_dateJourOk(){
-  if (dateArrivee < date_ajd) {
+console.info('date_adj = '+date_ajd+typeof(date_ajd));  
+
+
+function checkdate(date) {
+  console.info('function checkdate_arrivee');
+  var dateArrivee = document.getElementById(date).value;
+  var dateArrivee = convertion_date_jquery(dateArrivee);
+  console.log('dateArrivee = ' +dateArrivee+typeof(dateArrivee));
+  return dateArrivee;
+}
+
+
+function func_dateJourOk() {
+  console.info('function func_datejourOK');
+  var dateArrivee = checkdate('date_arv');
+  if (dateArrivee < date_ajd || isNaN(dateArrivee)) {
     date_arv_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être antérieure à la date du jour
     redborder(date_arv);
     date_arvf = false;
-  }else{
+  } else {
     date_arv_verif.innerHTML = '';
     greenborder(date_arv);
     date_arvf = true;
   }
+}
 
 
-function func_verifDate(){
-  if (dateArrivee > dateDepart) {
+function func_verifDate() {
+  console.info('function func_verifdate');
+  var dateArrivee = checkdate('date_arv');
+  var dateDepart = checkdate('date_dep');
+  if (dateArrivee > dateDepart || isNaN(dateDepart)) {
     date_dep_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être ultérieure à la date de départ
     redborder(date_dep);
     date_depf = false;
-  }else{
+  } else {
     date_dep_verif.innerHTML = '';
     greenborder(date_dep);
     date_depf = true;
   }
+}
+
+function reserver_chambre () {
+    func_dateJourOk();
+    func_verifDate();
+    console.log(date_arvf, date_depf);
+    if (date_arvf && date_depf) {
+    alert('Formulaire Ok');
+    event.preventDefault();
+  } else{
+    alert('Le formulaire est incomplet');
+    event.preventDefault();
+  }
+}
 
 
- function func_log_resa(){
+
+
+function func_log_resa(){
    console.info(dateArrivee);
  }
 
