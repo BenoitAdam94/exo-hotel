@@ -1,4 +1,4 @@
-Sitemap: http://www.benoit-sakote.fr.sitemap.xml
+Sitemap: http://www.benoit-sakote.fr/ifocop/sitemap.xml
 User-agent: *
 Disallow: /*.gif$
 Allow: /
