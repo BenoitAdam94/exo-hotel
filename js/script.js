@@ -353,6 +353,7 @@ function convertion_date_jquery(date) {
 
 var date_arvf = false;
 var date_depf = false;
+var date_tablef = false;
 var date_ajd = yyyymmdd();
 date_ajd = parseInt(date_ajd);
 
@@ -360,16 +361,14 @@ console.info('date_adj = '+date_ajd+typeof(date_ajd));
 
 
 function checkdate(date) {
-  console.info('function checkdate_arrivee');
-  var dateArrivee = document.getElementById(date).value;
-  var dateArrivee = convertion_date_jquery(dateArrivee);
-  console.log('dateArrivee = ' +dateArrivee+typeof(dateArrivee));
-  return dateArrivee;
+  var date_formate = document.getElementById(date).value;
+  var date_formate = convertion_date_jquery(date_formate);
+  console.log('date_formate = ' +date_formate+typeof(date_formate));
+  return date_formate;
 }
 
 
-function func_dateJourOk() {
-  console.info('function func_datejourOK');
+function func_date_arv_chambre() {
   var dateArrivee = checkdate('date_arv');
   if (dateArrivee < date_ajd || isNaN(dateArrivee)) {
     date_arv_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être antérieure à la date du jour
@@ -383,8 +382,7 @@ function func_dateJourOk() {
 }
 
 
-function func_verifDate() {
-  console.info('function func_verifdate');
+function func_verif_duree() {
   var dateArrivee = checkdate('date_arv');
   var dateDepart = checkdate('date_dep');
   if (dateArrivee > dateDepart || isNaN(dateDepart)) {
@@ -398,9 +396,25 @@ function func_verifDate() {
   }
 }
 
+
+function func_date_table() {
+  console.info('func_date_table');
+  var date_table2 = checkdate('date_table');
+  if (date_table2 < date_ajd || isNaN(date_table2)) {
+    date_table_verif.innerHTML = 'Veuillez sélectionner une date valide'; // la date d'arrivée ne peut pas être antérieure à la date du jour
+    redborder(date_table);
+    date_tablef = false;
+  } else {
+    date_table_verif.innerHTML = '';
+    greenborder(date_table);
+    date_tablef = true;
+  }
+}
+
+
 function reserver_chambre () {
-    func_dateJourOk();
-    func_verifDate();
+    func_date_arv_chambre();
+    func_verif_duree();
     console.log(date_arvf, date_depf);
     if (date_arvf && date_depf) {
     alert('Formulaire Ok');
@@ -410,6 +424,22 @@ function reserver_chambre () {
     event.preventDefault();
   }
 }
+
+function reserver_table () {
+    func_date_table();
+    // var heure_table_midi = document.getElementById(midi_heure).value;
+    // console.log(heure_table_midi);
+    console.log(date_tablef);
+    //if (date_tablef && heure_tablef && ppl_tablef) {
+    if (date_tablef) {
+    console.info('Formulaire Ok');
+    event.preventDefault();
+  } else{
+    alert('Le formulaire est incomplet');
+    event.preventDefault();
+  }
+}
+
 
 
 
