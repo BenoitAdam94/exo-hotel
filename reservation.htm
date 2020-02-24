@@ -173,10 +173,12 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                     <div class="p-2 form-group">
                     <form method="get" id="formulaire-table">
                         <label for="date_table">Date</label>
-                        <input type="text" class="form-control" onblur="func_dateJour()" id="date_table" required>
+                        <input type="text" class="form-control" id="date_table" required>
+                        <strong id="date_table_verif"></strong>
+
                         <br>
-                        <input type="radio" name="midisoir" value="m" id="midi" onclick="func_midisoir()" onblur="func_midisoir()" checked> Midi &nbsp;
-                        <input type="radio" name="midisoir" value="s" id="soir" onclick="func_midisoir()" onblur="func_midisoir()"> Soir
+                        <input type="radio" name="midisoir" value="m" id="midi" onblur="func_midisoir()" checked> Midi &nbsp;
+                        <input type="radio" name="midisoir" value="s" id="soir" onblur="func_midisoir()"> Soir
                         <br>
                         <br>
                         <span id="midi_h">
@@ -215,7 +217,7 @@ DIV#zip40c8e096{PADDING: 0px;MARGIN: 0px;OVERFLOW: auto;WIDTH: 100%;HEIGHT: 100%
                         </select>
                         <strong id="personnes_verif"></strong>
                         <br>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-table">Réserver une table</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block kkdoie" name="reservation_check" id="soumettre-table" onclick="reserver_table()">Réserver une table</button>
                     </form>
                     </div>
                 </div>

@@ -167,6 +167,10 @@ a:hover{
   width: 80% !important;
 }
 
+.min-vh-50 {
+  min-height: 50vh !important;
+}
+
 .w-60 {
   width: 60% !important;
 }
